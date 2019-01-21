@@ -1,0 +1,74 @@
+  <div class="container" > 
+    <h3 class="font-weight-light" style="margin-right: auto%; text-align: center; "> {{title}} con <strong > iCoach</strong></h3>
+    <br>
+    <p class="font-weight-light">Buscalos por su disponibilidad geográfica</p>
+     <select class="form-control form-control-sm" name="region1" id="region1" #region1="ngModel" [(ngModel)]="searchText" required>
+        <option value=""> Todos </option>
+        <option value="Arica y Parinacota"> Arica y Parinacota   </option>
+        <option value="Región de Tarapacá"> Región de Tarapacá </option>
+        <option value="Región de Antofagasta"> Región de Antofagasta </option>
+        <option value="Región de Atacama"> Región de Atacama </option>
+        <option value="Región de Coquimbo"> Región de Coquimbo </option>
+        <option value="Región de Valparaíso"> Región de Valparaíso </option>
+        <option value="Región Metropolitana de Santiago"> Región Metropolitana de Santiago </option>
+        <option value="Región del Libertador General Bernardo O'Higgins"> Región del Libertador General Bernardo O'Higgins </option>
+        <option value="Región del Maule"> Región del Maule </option>
+        <option value="Región de Ñuble"> Región de Ñuble </option>
+        <option value="Región del Biobío"> Región del Biobío </option>
+        <option value="Región de Los Ríos"> Región de Los Ríos </option>
+        <option value="Región de Los Lagos"> Región de Los Lagos </option>
+        <option value="Región de Aysén del General Carlos Ibáñez del Campo"> Región de Aysén del General Carlos Ibáñez del Campo 
+        </option>
+        <option value="Región de Magallanes y de la Antártica Chilena"> Región de Magallanes y de la Antártica Chilena </option>
+    </select>
+    <div class="row" style="margin-top: 30px">
+  
+  
+    
+
+  
+    <!-- Tabla-->
+    <div class="col-md-12">
+      <div class="table-responsive" id="table">
+    <table id="mytable" class="table " data-toggle="table" >    
+     <thead>
+        
+        <th style=" color:#06394A " > Nombre <i class="fas fa-signature"></i> </th>
+        <th style=" color:#06394A"> Region <i class="fas fa-map-marker-alt"></i></th>
+        <th style=" color:#06394A"> Region <i class="fas fa-map-marker-alt"></i></th>
+        <th style=" color:#06394A"> Region <i class="fas fa-map-marker-alt"></i></th>   
+        <th style=" color:#06394A"> Contacta <i class="fas fa-briefcase"></i></th>                
+      
+    </thead>
+    
+    <tbody>
+     <tr *ngFor="let user of users | fresh: {region1: searchText, region2: searchText, region3: searchText}; let i=index;">
+       
+        <td > {{user.name}} {{user.lastname}}</td>
+        <td > {{user.region1}} </td>
+        <td > {{user.region2}} </td>
+        <td > {{user.region3}} </td> 
+        <th > 
+          <a [routerLink]="['/perfil-publico', user._id]"> Ver Perfil 
+            <i class="fas fa-user-alt" style=" color:#06394A"></i></a>  
+        </th>
+
+      </tr>
+      </tbody>
+      </table>
+      <div class="clearfix"></div>
+      <ul class="pagination pull-right">
+        <li *ngIf="page > 1"><a [routerLink]="['/contacto', prev_page]"> 
+          <span class="glyphicon glyphicon-chevron-left"></span></a>
+        </li>
+        <li *ngIf="pages != page">
+          <a [routerLink]="['/contacto', next_page]"> 
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+        </li>
+      </ul>
+    
+    </div>
+  </div>
+  </div>
+</div>

@@ -1,0 +1,610 @@
+<div class="container"> 
+<form (ngSubmit)="guardar(forma)" #forma="ngForm"> 
+<h4 class="description" for="element_1"> Selecciona solo con las que te sientes identificado </h4>
+<span>
+  <!-- el Reformador -->
+  <input id="element_1_1"  name="radio0" class="element checkbox" type="radio"  [(ngModel)]="answers['0']"
+    [value]="1" />
+  <label class="choice" for="element_1_1">“Me sorprendo de que la gente no vea las cosas tan claras como yo las veo.”</label>
+  <input id="element_1_2" name="radio1" class="element checkbox" type="radio"  [(ngModel)]="answers['1']"
+    [value]="1" />
+  <label class="choice" for="element_1_2">“Me enfada mucho que la gente no se dé cuenta de sus errores. Me cuesta
+    entender por qué no cambian y corrigen su actitud.”</label>
+  <input id="element_1_3" name="radio2" class="element checkbox" type="radio"  [(ngModel)]="answers['2']"
+    [value]="1" />
+  <label class="choice" for="element_1_3">“Sinceramente, muchas veces pienso que tengo razón. Tengo un fuerte sentido
+    de cómo deberían ser las cosas.”</label>
+  <input id="element_1_4" name="radio3" class="element checkbox" type="radio"  [(ngModel)]="answers['3']"
+    [value]="1" />
+  <label class="choice" for="element_1_4">“Si cada uno hiciera lo que tiene que hacer este mundo no sería tan
+    imperfecto.”</label>
+  <input id="element_1_5" name="radio4" class="element checkbox" type="radio"  [(ngModel)]="answers['4']"
+    [value]="1" />
+  <label class="choice" for="element_1_5">“Creo que la gente me considera una persona seria, objetiva, sensata y
+    racional.</label>
+  <input id="element_1_6" name="radio5" class="element checkbox" type="radio"  [(ngModel)]="answers['5']"
+    [value]="1" />
+  <label class="choice" for="element_1_6">“No me gusta enfadarme, ¡y mira que me aguanto! pero es que hay cosas que me
+    sacan de quicio. Aunque también es verdad que en público no muestro mi ira”</label>
+  <input id="element_1_7" name="radio6" class="element checkbox" type="radio"  [(ngModel)]="answers['6']"
+    [value]="1" />
+  <label class="choice" for="element_1_7">“Generalmente he sido una persona disciplinada, bien organizada y puntual”</label>
+  <input id="element_1_8" name="radio7" class="element checkbox" type="radio"  [(ngModel)]="answers['7']"
+    [value]="1" />
+  <label class="choice" for="element_1_8">“Reconozco que la gente me cansa con sus tonterías. Si llevaran vidas más
+    organizadas no se equivocarían tanto.”</label>
+  <input id="element_1_9" name="radio8" class="element checkbox" type="radio"  [(ngModel)]="answers['8']"
+    [value]="1" />
+  <label class="choice" for="element_1_9">“Me cuesta aceptar a las personas que tienen valores morales tan bajos”</label>
+  <input id="element_1_10" name="radio9"  class="element checkbox" type="radio"  [(ngModel)]="answers['9']"
+    [value]="1" />
+  <label class="choice" for="element_1_10">“No me gusta cometer errores. Me gusta ser preciso y minucioso para
+    asegurarme de que las cosas se hacen correctamente.”</label>
+  <input id="element_1_11" name="radio10"  class="element checkbox" type="radio"  [(ngModel)]="answers['10']"
+    [value]="1" />
+  <label class="choice" for="element_1_11">“La gente confía en mí porque sabe que hago las cosas bien y a tiempo.”</label>
+  <input id="element_1_12" name="radio11"  class="element checkbox" type="radio"  [(ngModel)]="answers['11']"
+    [value]="1" />
+  <label class="choice" for="element_1_12">“He tenido que esforzarme por mantenerme sereno y no perder el control.”</label>
+  <input id="element_1_13" name="radio12"  class="element checkbox" type="radio"  [(ngModel)]="answers['12']"
+    [value]="1" />
+  <label class="choice" for="element_1_13">“A veces doy la impresión a los demás de estar muy seguro de mi mismo,
+    sobretodo cuando les intento ayudar a que vean que están equivocándose.”</label>
+  <input id="element_1_14" name="radio13"  class="element checkbox" type="radio"  [(ngModel)]="answers['13']"
+    [value]="1" />
+  <label class="choice" for="element_1_14">“Desde niño me di cuenta de que yo veía la realidad de forma mucho más
+    clara que el resto de las personas. Siempre he tenido firmes convicciones y razones sobre los que fundamentar mis
+    puntos de vista.”</label>
+  <input id="element_1_15" name="radio14"  class="element checkbox" type="radio"  [(ngModel)]="answers['14']"
+    [value]="1" />
+  <label class="choice" for="element_1_15">“Aunque por fuera pueda parecer riguroso y serio, en mi interior escondo
+    profundos sentimientos que muchas personas ignoran que tengo.”</label>
+  <input id="element_1_16" name="radio15"  class="element checkbox" type="radio"  [(ngModel)]="answers['15']"
+    [value]="1" />
+  <label class="choice" for="element_1_16">“Reconozco que tiendo a exigirme mucho a mi mismo. A veces he sido demasiado
+    serio y estricto conmigo mismo.”</label>
+  <input id="element_1_17" name="radio16"  class="element checkbox" type="radio"  [(ngModel)]="answers['16']"
+    [value]="1" />
+  <label class="choice" for="element_1_17">“Suelo prever las equivocaciones de las personas. Intento avisarles de lo
+    que les ocurrirá si no siguen mis consejos. Al final, muchas veces tengo razón.”</label>
+  <input id="element_1_18" name="radio17" class="element checkbox" type="radio"  [(ngModel)]="answers['17']"
+    [value]="1" />
+  <label class="choice" for="element_1_18">“A veces me tildan de severo y rígido. Pero no se puede transigir cuando
+    las cosas se hacen mal. Aunque no se den cuenta ni lo valoren, yo sé que hago lo correcto.”</label>
+  <input id="element_1_19" name="radio18" class="element checkbox" type="radio"  [(ngModel)]="answers['18']"
+    [value]="1" />
+  <label class="choice" for="element_1_19">“Creo que el amor sincero no depende de las manifestaciones “emotivas”.
+    Obras son amores y no buenas razones.”</label>
+  <input id="element_1_20" name="radio19" class="element checkbox" type="radio"  [(ngModel)]="answers['19']"
+    [value]="1" />
+  <label class="choice" for="element_1_20">“A veces las personas se molestan por mi costumbre de decirles lo que hay
+    que hacer. Pero yo solo quiero aconsejarles para que lo que hagan, lo hagan bien.”</label>
+  <!-- El ayudador -->
+  <input id="element_1_1" name="radio20" class="element checkbox" type="radio"  [(ngModel)]="answers['20']" [value]="2" />
+  <label class="choice" for="element_1_1">“Quiero a la gente y me encanta que me quieran. Creo que no hay nada más
+    importante en la vida que el amor y la ayuda a los demás.”</label>
+  <input id="element_1_2" name="radio21" class="element checkbox" type="radio"  [(ngModel)]="answers['21']" [value]="2" />
+  <label class="choice" for="element_1_2">“Mi interés genuino en los demás me lleva a que comparta sus ilusiones, sus
+    sueños, sus necesidades y sus esperanzas. Me preocupo mucho porque estén bien.”</label>
+  <input id="element_1_3" name="radio22" class="element checkbox" type="radio"  [(ngModel)]="answers['22']" [value]="2" />
+  <label class="choice" for="element_1_3">“Me encanta que las personas se acerquen a mi y me pidan consejo.”</label>
+  <input id="element_1_4" name="radio23" class="element checkbox" type="radio"  [(ngModel)]="answers['23']" [value]="2" />
+  <label class="choice" for="element_1_4">“Reconozco que me cuesta mucho pedir lo que necesito”.</label>
+  <input id="element_1_5" name="radio24" class="element checkbox" type="radio"  [(ngModel)]="answers['24']" [value]="2" />
+  <label class="choice" for="element_1_5">“Las personas que me conocen me han valorado por mi generosidad y mi
+    silenciosa fortaleza.”</label>
+  <input id="element_1_6" name="radio25" class="element checkbox" type="radio"  [(ngModel)]="answers['25']" [value]="2" />
+  <label class="choice" for="element_1_6">“Cuando me implico emocionalmente con alguien me olvido un poco de mí. Es
+    como si estuviera más preocupado por sus necesidades que por las mías. ”</label>
+  <input id="element_1_7" name="radio26" class="element checkbox" type="radio"  [(ngModel)]="answers['26']" [value]="2" />
+  <label class="choice" for="element_1_7">“Siempre intento ser diplomático, sensible y atento a las opiniones de los
+    demás.”</label>
+  <input id="element_1_8" name="radio27" class="element checkbox" type="radio"  [(ngModel)]="answers['27']" [value]="2" />
+  <label class="choice" for="element_1_8">“Soy muy empático cuando veo el dolor en los demás. Cuando veo escenas de
+    sufrimiento en la televisión se me cae el corazón al suelo.”</label>
+  <input id="element_1_9" name="radio28" class="element checkbox" type="radio"  [(ngModel)]="answers['28']" [value]="2" />
+  <label class="choice" for="element_1_9">“Es ver a un pobre perrito perdido por la calle y ya deseo llevármelo a
+    casa.”</label>
+  <input id="element_1_10" name="radio29" class="element checkbox" type="radio"  [(ngModel)]="answers['29']"
+    [value]="2" />
+  <label class="choice" for="element_1_10">“Dedicarme tanto a mis relaciones me ha agotado emocionalmente.”</label>
+  <input id="element_1_11" name="radio30" class="element checkbox" type="radio"  [(ngModel)]="answers['30']"
+    [value]="2" />
+  <label class="choice" for="element_1_11">“Soy una persona acogedora, es muy importante para mí que en mi casa o en
+    una reunión social todo el mundo se sienta cómodo, alegre, bienvenido e integrado”</label>
+  <input id="element_1_12" name="radio31" class="element checkbox" type="radio"  [(ngModel)]="answers['31']"
+    [value]="2" />
+  <label class="choice" for="element_1_12">“Con frecuencia he sido una persona muy sentimental. Soy de lágrima fácil.
+    Cualquier cosa bonita o fea me puede hacer llorar: un gesto, una imagen...”</label>
+  <input id="element_1_13" name="radio32" class="element checkbox" type="radio"  [(ngModel)]="answers['32']"
+    [value]="2" />
+  <label class="choice" for="element_1_13">“A veces mis familiares se sorprenden de mis reacciones de rabia cuando
+    siento que no tienen en cuenta mis sentimientos, porque yo sí estoy atento a los suyos”.</label>
+  <input id="element_1_14" name="radio33" class="element checkbox" type="radio"  [(ngModel)]="answers['33']"
+    [value]="2" />
+  <label class="choice" for="element_1_14">“Suelo ser el paño de lágrimas de todos. Sanador de corazones rotos”</label>
+  <input id="element_1_15" name="radio34" class="element checkbox" type="radio"  [(ngModel)]="answers['34']"
+    [value]="2" />
+  <label class="choice" for="element_1_15">“Me encanta abrazar y sentir cerca a todo el mundo. El contacto físico me
+    parece muy importante, me hace sentirme próximo y conectado a los demás.”</label>
+  <input id="element_1_16" name="radio35" class="element checkbox" type="radio"  [(ngModel)]="answers['35']"
+    [value]="2" />
+  <label class="choice" for="element_1_16">“Me gusta dar cumplidos sinceros a los demás, decir lo bueno que tienen las
+    personas y confesar a las personas queridas lo importantes que son para mí.”</label>
+  <input id="element_1_17" name="radio36" class="element checkbox" type="radio"  [(ngModel)]="answers['36']"
+    [value]="2" />
+  <label class="choice" for="element_1_17">“Me identifico un poco con Teresa de Calcuta y con la cantante Shakira: me
+    gusta ser una persona fuerte, ayudadora y entregada a las personas que quiero -como Teresa-, y también porque me
+    gusta ser sensual, alegre y atrevida como Shakira.”</label>
+  <input id="element_1_18" name="radio37" class="element checkbox" type="radio"  [(ngModel)]="answers['37']"
+    [value]="2" />
+  <label class="choice" for="element_1_18">“Me molesta ver que los demás no sintonizan conmigo tanto como yo con
+    ellos”</label>
+  <input id="element_1_19" name="radio38" class="element checkbox" type="radio"  [(ngModel)]="answers['38']"
+    [value]="2" />
+  <label class="choice" for="element_1_19">“Me cuesta mucho decir no cuando alguien me pide algo. A veces siento mucha
+    rabia y me arrepiento de no haberme negado. A veces me agoto ayudando tanto.”</label>
+  <input id="element_1_20" name="radio39" class="element checkbox" type="radio"  [(ngModel)]="answers['39']"
+    [value]="2" />
+  <label class="choice" for="element_1_20">“Me gusta ayudar, creo que es el valor humano más importante. Pero
+    reconozco que no me gusta tanto que me ayuden. Prefiero sentirme independiente.”</label>
+  <!-- El triunfador -->
+  <input id="element_1_1" name="radio40" class="element checkbox" type="radio"  [(ngModel)]="answers['40']" [value]="3" />
+  <label class="choice" for="element_1_1">“Me considero una persona eficaz y competente. ¡Me gusta trabajar a pleno
+    rendimiento hasta que termino una tarea!”</label>
+  <input id="element_1_2" name="radio41" class="element checkbox" type="radio"  [(ngModel)]="answers['41']" [value]="3" />
+  <label class="choice" for="element_1_2">“Creo que todas las personas tendrían que esforzarse para sacar su máximo
+    potencial. Yo siempre he buscado la manera de sacar mi máximo rendimiento.”</label>
+  <input id="element_1_3" name="radio42" class="element checkbox" type="radio"  [(ngModel)]="answers['42']" [value]="3" />
+  <label class="choice" for="element_1_3">“Me gusta causar buena impresión, ¡la imagen es muy importante!”</label>
+  <input id="element_1_4" name="radio43" class="element checkbox" type="radio"  [(ngModel)]="answers['43']" [value]="3" />
+  <label class="choice" for="element_1_4">“Me gusta que las personas sepan a qué me dedico y conozcan mis éxitos.”</label>
+  <input id="element_1_5" name="radio44" class="element checkbox" type="radio"  [(ngModel)]="answers['44']" [value]="3" />
+  <label class="choice" for="element_1_5">“Me suelen echar en cara que siempre estoy ocupado. Reconozco que soy un poco
+    “hiperactivo”, ¡pero me encanta vivir la vida al máximo!”</label>
+  <input id="element_1_6" name="radio45" class="element checkbox" type="radio"  [(ngModel)]="answers['45']" [value]="3" />
+  <label class="choice" for="element_1_6">“Soy una persona orientada a objetivos, me gusta medir los resultados de mis
+    proyectos y sentir que evoluciono y tengo éxitos a nivel personal y profesional.”</label>
+  <input id="element_1_7" name="radio46" class="element checkbox" type="radio"  [(ngModel)]="answers['46']" [value]="3" />
+  <label class="choice" for="element_1_7">“Aburrimiento es una palabra que no existe en mi vocabulario. No entiendo a
+    los que se aburren, ¡con la cantidad de cosas emocionantes que se pueden hacer!”</label>
+  <input id="element_1_8" name="radio47" class="element checkbox" type="radio"  [(ngModel)]="answers['47']" [value]="3" />
+  <label class="choice" for="element_1_8">“Me cuesta estar parado, no encuentro sentido a no hacer nada. Me gusta
+    realizarme: proponerme metas y lograrlas. Eso sí que me hace sentir pleno.”</label>
+  <input id="element_1_9" name="radio48" class="element checkbox" type="radio"  [(ngModel)]="answers['48']" [value]="3" />
+  <label class="choice" for="element_1_9">“En el fondo, siento vergüenza si los demás descubren mis inseguridades.
+    Por eso intento dar siempre una buena impresión y mostrar lo mejor de mí mismo.”</label>
+  <input id="element_1_10" name="radio49" class="element checkbox" type="radio"  [(ngModel)]="answers['49']" [value]="3"/>
+  <label class="choice" for="element_1_10">“En general, me siento satisfecho conmigo mismo. Y tengo una alta
+    autoestima.”</label>
+  <input id="element_1_11" name="radio50" class="element checkbox" type="radio"  [(ngModel)]="answers['50']" [value]="3"/>
+  <label class="choice" for="element_1_11">“Me gusta ser como soy y confío en mí mismo. Aunque pase por malos
+    momentos, logro reponerme rápidamente y lanzarme de lleno a la próxima meta”</label>
+  <input id="element_1_12" name="radio51" class="element checkbox" type="radio"  [(ngModel)]="answers['51']"
+    [value]="3" />
+  <label class="choice" for="element_1_12">“A veces no sé que siento, es como que me cuesta conectar con mis
+    sentimientos.”</label>
+  <input id="element_1_13" name="radio52" class="element checkbox" type="radio"  [(ngModel)]="answers['52']"
+    [value]="3" />
+  <label class="choice" for="element_1_13">“Reconozco que me gusta destacar y que me valoren por lo que hago.”</label>
+  <input id="element_1_14" name="radio53" class="element checkbox" type="radio"  [(ngModel)]="answers['53']"
+    [value]="3" />
+  <label class="choice" for="element_1_14">“Pienso que lo más importante en la vida es tener éxito, resultados y
+    lograr las metas que uno se propone.”</label>
+  <input id="element_1_15" name="radio54" class="element checkbox" type="radio"  [(ngModel)]="answers['54']"
+    [value]="3" />
+  <label class="choice" for="element_1_15">“Trabajo muy duro para cuidar y sustentar a mi familia. La seguridad
+    económica es muy importante.”</label>
+  <input id="element_1_16" name="radio55" class="element checkbox" type="radio"  [(ngModel)]="answers['55']"
+    [value]="3" />
+  <label class="choice" for="element_1_16">“Soy una persona muy motivada y motivadora, siempre intento animar a los
+    demás a que saquen lo mejor de sí mismos.”</label>
+  <input id="element_1_17" name="radio56" class="element checkbox" type="radio"  [(ngModel)]="answers['56']"
+    [value]="3" />
+  <label class="choice" for="element_1_17">“Me considero una persona competente, capaz de poner las cosas en marcha,
+    capaz de motivar a las personas y capaz de adaptarme a las situaciones.”</label>
+  <input id="element_1_18" name="radio57" class="element checkbox" type="radio"  [(ngModel)]="answers['57']"
+    [value]="3" />
+  <label class="choice" for="element_1_18">“Suelo esforzarme al máximo por ser el mejor en lo que hago. Es muy
+    importante para mí sentir que tengo éxito en lo que estoy haciendo. No me permito el fracaso.”</label>
+  <input id="element_1_19" name="radio58" class="element checkbox" type="radio"  [(ngModel)]="answers['58']"
+    [value]="3" />
+  <label class="choice" for="element_1_19">“Por supuesto que me molesta que la gente no reconozca la excelencia con la
+    que hago las cosas. Pienso que soy mejor de lo que la gente cree que soy”.</label>
+  <input id="element_1_20" name="radio59" class="element checkbox" type="radio"  [(ngModel)]="answers['59']"
+    [value]="3" />
+  <label class="choice" for="element_1_20">“Mi estilo de vida, mis valores y mis objetivos han cambiado varias veces a
+    lo largo de mi vida. Me he “reinventado” a mi mismo ante la adversidad.”</label>
+  <!-- El artista -->
+  <input id="element_1_1" name="radio60" class="element checkbox" type="radio"  [(ngModel)]="answers['60']" [value]="4" />
+  <label class="choice" for="element_1_1">“La gente no suele llegar a la profundidad de sentimientos que yo
+    experimento.”</label>
+  <input id="element_1_2" name="radio61" class="element checkbox" type="radio"  [(ngModel)]="answers['61']" [value]="4" />
+  <label class="choice" for="element_1_2">“Muchas veces me he preguntado por qué los demás parecen más felices que
+    yo y les va mejor que a mí, si en realidad llevan vidas muy normalitas, casi mediocres.”</label>
+  <input id="element_1_3" name="radio62" class="element checkbox" type="radio"  [(ngModel)]="answers['62']" [value]="4" />
+  <label class="choice" for="element_1_3">“La vida está para vivir intensas emociones, no soportaría una vida sin
+    poder vivir situaciones que me producen fuertes y profundas sensaciones.”</label>
+  <input id="element_1_4" name="radio63" class="element checkbox" type="radio"  [(ngModel)]="answers['63']" [value]="4" />
+  <label class="choice" for="element_1_4">“Aunque no tenga nada en contra de ellos, pienso que la mayoría de la gente
+    es vulgar, con poca gracia, sin estilo; por eso solo me relaciono con pocas personas.”</label>
+  <input id="element_1_5" name="radio64" class="element checkbox" type="radio"  [(ngModel)]="answers['64']" [value]="4" />
+  <label class="choice" for="element_1_5">“Desde siempre he sido una persona individualista, creativa, intensa e
+    intuitiva. Me he sentido siempre especialmente virtuoso en el arte y la imaginación.”</label>
+  <input id="element_1_6" name="radio65" class="element checkbox" type="radio"  [(ngModel)]="answers['65']" [value]="4" />
+  <label class="choice" for="element_1_6">“Vivo un mundo interior tan cambiante y profundo que he dedicado mucho tiempo
+    a averiguar qué es lo que mis sentimientos tienen que decirme.”</label>
+  <input id="element_1_7" name="radio66" class="element checkbox" type="radio"  [(ngModel)]="answers['66']" [value]="4" />
+  <label class="choice" for="element_1_7">“No me gusta ni que me manden ni mandar. Odio que me digan lo que tengo que
+    hacer y que otros dirijan mi vida. Me gusta ir a mi bola.”</label>
+  <input id="element_1_8" name="radio67" class="element checkbox" type="radio"  [(ngModel)]="answers['67']" [value]="4" />
+  <label class="choice" for="element_1_8">“Una vida sin pasión ni fuertes emociones no merece la pena ser vivida.”</label>
+  <input id="element_1_9" name="radio68" class="element checkbox" type="radio"  [(ngModel)]="answers['68']" [value]="4" />
+  <label class="choice" for="element_1_9">“Cuando he pasado épocas de mi vida deprimido, secretamente he pensado que
+    en última instancia me queda el suicidio como salida para terminar con el dolor.”</label>
+  <input id="element_1_10" name="radio69" class="element checkbox" type="radio"  [(ngModel)]="answers['69']"
+    [value]="4" />
+  <label class="choice" for="element_1_10">“Me he sentido muy identificado con la princesa del cuento que espera al
+    príncipe azul para que me saque del sufrimiento, el aburrimiento y la mediocridad.”</label>
+  <input id="element_1_11" name="radio70" class="element checkbox" type="radio"  [(ngModel)]="answers['70']"
+    [value]="4" />
+  <label class="choice" for="element_1_11">“A veces creo que mi universo de emociones es tan grande que solo los
+    artistas, los poetas y los creativos son capaces de entenderme.”</label>
+  <input id="element_1_12" name="radio71" class="element checkbox" type="radio"  [(ngModel)]="answers['71']"
+    [value]="4" />
+  <label class="choice" for="element_1_12">“Aunque intento aparentar a los demás que estoy sereno y tranquilo, por
+    dentro vivo un tormento emocional, y sufro mucho por ello.”</label>
+  <input id="element_1_13" name="radio72" class="element checkbox" type="radio"  [(ngModel)]="answers['72']"
+    [value]="4" />
+  <label class="choice" for="element_1_13">“Me gustaría entenderme a mi mismo: unas veces me encanta como soy, otras
+    veces me avergüenzo de lo que soy. Mi aspiración es realizarme como persona.”</label>
+  <input id="element_1_14" name="radio73" class="element checkbox" type="radio"  [(ngModel)]="answers['73']"
+    [value]="4" />
+  <label class="choice" for="element_1_14">“Cualquier cosa puede herir mi sensibilidad. Una palabra, un tono de voz o
+    gesto, cualquier mínimo feo detalle puede desencadenar en mi dolorosas emociones.”</label>
+  <input id="element_1_15" name="radio74" class="element checkbox" type="radio"  [(ngModel)]="answers['74']"
+    [value]="4" />
+  <label class="choice" for="element_1_15">“Desde niño me he sentido una persona especial, única y diferente a los
+    demás.”</label>
+  <input id="element_1_16" name="radio75" class="element checkbox" type="radio"  [(ngModel)]="answers['75']"
+    [value]="4" />
+  <label class="choice" for="element_1_16">“Reconozco que soy un poco montaña rusa emocional: unas veces estoy arriba
+    y me siento una persona guay, diferente y genial; otras veces caigo abajo y me deprimo pensando que en realidad
+    valgo muy poco, y me siento sin autoestima.”</label>
+  <input id="element_1_17" name="radio76" class="element checkbox" type="radio"  [(ngModel)]="answers['76']"
+    [value]="4" />
+  <label class="choice" for="element_1_17">“Lo más importante de la vida es realizarse a sí mismo y encontrar el
+    amor.”</label>
+  <input id="element_1_18" name="radio77" class="element checkbox" type="radio"  [(ngModel)]="answers['77']"
+    [value]="4" />
+  <label class="choice" for="element_1_18">“Me atormenta quedarme tanto tiempo rumiando mis problemas. Me cuesta
+    deshacerme de ellos. ¿Por qué los demás parece que llevan vidas tan fáciles?”</label>
+  <input id="element_1_19" name="radio78" class="element checkbox" type="radio"  [(ngModel)]="answers['78']"
+    [value]="4" />
+  <label class="choice" for="element_1_19">“Es posible que la mayor parte de mis problemas con los demás provengan de
+    lo susceptible que soy. Me tomo las cosas de manera muy personal.”</label>
+  <input id="element_1_20" name="radio79" class="element checkbox" type="radio"  [(ngModel)]="answers['79']"
+    [value]="4" />
+  <label class="choice" for="element_1_20">“En mi interior me siento vulnerable, temo mucho el abandono y el rechazo.”</label>
+  <!-- El pensador -->
+  <input id="element_1_1" name="radio80" class="element checkbox" type="radio"  [(ngModel)]="answers['80']" [value]="5" />
+  <label class="choice" for="element_1_1">“Siempre he pensado que el conocimiento me dará seguridad. Es necesario
+    saber mucho para estar preparado en este mundo.”</label>
+  <input id="element_1_2" name="radio81" class="element checkbox" type="radio"  [(ngModel)]="answers['81']" [value]="5" />
+  <label class="choice" for="element_1_2">“No soy un ‘relaciones públicas’. En realidad soy una persona reservada, un
+    poco tímida, y no dejo entrar a muchas personas en mi espacio íntimo y personal.”</label>
+  <input id="element_1_3" name="radio82" class="element checkbox" type="radio"  [(ngModel)]="answers['82']" [value]="5" />
+  <label class="choice" for="element_1_3">“Me gusta llegar al fondo de las cuestiones. Cuando me pongo a investigar
+    algo, profundizo en ello y estudio cada detalle hasta que siento haberlo entendido todo”</label>
+  <input id="element_1_4" name="radio83" class="element checkbox" type="radio"  [(ngModel)]="answers['83']" [value]="5" />
+  <label class="choice" for="element_1_4">“No me siento muy fuerte, ni importante, ni poderoso. Más bien, en mi
+    interior me siento pequeño y frágil. Pero sé que soy inteligente, perceptivo y ahorrador.”</label>
+  <input id="element_1_5" name="radio84" class="element checkbox" type="radio"  [(ngModel)]="answers['84']" [value]="5" />
+  <label class="choice" for="element_1_5">“Suelen decirme que debería tener más vida social y llamar más a mis
+    amigos.”</label>
+  <input id="element_1_6" name="radio85" class="element checkbox" type="radio"  [(ngModel)]="answers['85']" [value]="5" />
+  <label class="choice" for="element_1_6">“Cuando estoy con personas de confianza soy muy hablador. Si estoy con otras
+    personas, puedo quedarme callado observando.”</label>
+  <input id="element_1_7" name="radio86" class="element checkbox" type="radio"  [(ngModel)]="answers['86']" [value]="5" />
+  <label class="choice" for="element_1_7">“Me cuesta entablar relaciones de confianza y nunca me he visto con
+    demasiadas habilidades sociales. Rara vez he sido demasiado expresivo emocionalmente.”</label>
+  <input id="element_1_8" name="radio87" class="element checkbox" type="radio"  [(ngModel)]="answers['87']" [value]="5" />
+  <label class="choice" for="element_1_8">“Mi mente es tan activa que no para de pensar. Pienso mucho porque quiero
+    sentirme seguro de que tomo buenas decisiones antes de actuar.”</label>
+  <input id="element_1_9" name="radio88" class="element checkbox" type="radio"  [(ngModel)]="answers['88']" [value]="5" />
+  <label class="choice" for="element_1_9">“Cuando me interesa un tema me concentro tanto en investigar y leer todo
+    sobre ello que se me pasa el tiempo volando sin enterarme”</label>
+  <input id="element_1_10" name="radio89" class="element checkbox" type="radio"  [(ngModel)]="answers['89']"
+    [value]="5" />
+  <label class="choice" for="element_1_10">“Me cuesta abrirme socialmente, pero cuando lo he hecho la gente se ha
+    sorprendido de mi sentido del humor inteligente.”</label>
+  <input id="element_1_11" name="radio90" class="element checkbox" type="radio"  [(ngModel)]="answers['90']"
+    [value]="5" />
+  <label class="choice" for="element_1_11">“Antes de hablar y opinar sobre algo me gusta estar muy bien informado”.</label>
+  <input id="element_1_12" name="radio91" class="element checkbox" type="radio"  [(ngModel)]="answers['91']"
+    [value]="5" />
+  <label class="choice" for="element_1_12">“Normalmente he intentado depender de los demás lo menos posible y
+    preservar mi intimidad e independencia.”</label>
+  <input id="element_1_13" name="radio92" class="element checkbox" type="radio"  [(ngModel)]="answers['92']"
+    [value]="5" />
+  <label class="choice" for="element_1_13">“He de reconocer que desde siempre he tenido muchas dudas y tiendo a
+    cuestionarme sobre lo que parecen y lo que verdaderamente son las cosas.”</label>
+  <input id="element_1_14" name="radio93" class="element checkbox" type="radio"  [(ngModel)]="answers['93']"
+    [value]="5" />
+  <label class="choice" for="element_1_14">“Mi estilo de vida es más bien sobrio y austero. No me gusta malgastar el
+    dinero.”</label>
+  <input id="element_1_15" name="radio94" class="element checkbox" type="radio"  [(ngModel)]="answers['94']"
+    [value]="5" />
+  <label class="choice" for="element_1_15">“La gente me cansa un poco. Tanta actividad social me hace sentir
+    presionado. Necesito tiempo para mí, me encantan mis momentos conmigo mismo”</label>
+  <input id="element_1_16" name="radio95" class="element checkbox" type="radio"  [(ngModel)]="answers['95']"
+    [value]="5" />
+  <label class="choice" for="element_1_16">“Me cuesta expresar verbalmente mis sentimientos. Pero cuando estoy a solas
+    puedo conectar con mis sentimientos más profundamente.”</label>
+  <input id="element_1_17" name="radio96" class="element checkbox" type="radio"  [(ngModel)]="answers['96']"
+    [value]="5" />
+  <label class="choice" for="element_1_17">“Reconozco que a veces no soy todo lo generoso que debería serlo con los
+    demás.”</label>
+  <input id="element_1_18" name="radio97" class="element checkbox" type="radio"  [(ngModel)]="answers['97']"
+    [value]="5" />
+  <label class="choice" for="element_1_18">“Intento evitar demasiados encuentros sociales. Aguanto poco estar rodeado
+    de mucha gente. Prefiero estar solo o con personas que conozco bien.”</label>
+  <input id="element_1_19" name="radio98" class="element checkbox" type="radio"  [(ngModel)]="answers['98']"
+    [value]="5" />
+  <label class="choice" for="element_1_19">“Ante la presión de los demás me he vuelto un poco huidizo y desapegado.
+    En muchos momentos prefiero habitar en mi propio y pequeño mundo.”</label>
+  <input id="element_1_20" name="radio99" class="element checkbox" type="radio"  [(ngModel)]="answers['99']"
+    [value]="5" />
+  <label class="choice" for="element_1_20">“Soy una persona muy curiosa, me encanta investigar y saber muchas cosas.
+    ¡En algunos temas me considero todo un experto!”</label>
+  <!--El leal-->
+  <input id="element_1_1" name="radio100" class="element checkbox" type="radio"   [(ngModel)]="answers['100']"
+    [value]="6"/>
+<label class="choice" for="element_1_1">“Me siento orgulloso de ser una persona fiel, comprometida, de confianza.”</label>
+<input id="element_1_2" name="radio101" class="element checkbox" type="radio"   [(ngModel)]="answers['101']"
+    [value]="6"/>
+<label class="choice" for="element_1_2">“Soy una persona prudente. Siempre he sido muy cauto y he intentado estar preparado y seguro ante cualquier problema imprevisible.”</label>
+<input id="element_1_3" name="radio102" class="element checkbox" type="radio"   [(ngModel)]="answers['102']"
+    [value]="6"/>
+<label class="choice" for="element_1_3">“He estado al lado de mis verdaderos amigos, porque la fidelidad es el valor más importante en las relaciones.”</label>
+<input id="element_1_4" name="radio103" class="element checkbox" type="radio"   [(ngModel)]="answers['103']"
+    [value]="6"/>
+<label class="choice" for="element_1_4">“He de reconocer que normalmente no he confiado mucho en mí mismo, y he dado la impresión de estar demasiado inseguro.”</label>
+<input id="element_1_5" name="radio104" class="element checkbox" type="radio"   [(ngModel)]="answers['104']"
+    [value]="6"/>
+<label class="choice" for="element_1_5">“Tiendo a demorar la toma de decisiones, no me gusta tomar la iniciativa de las cosas. Prefiero escuchar opiniones de otras personas y yo juzgar si son buenas.”</label>
+<input id="element_1_6" name="radio105" class="element checkbox" type="radio"   [(ngModel)]="answers['105']"
+    [value]="6"/>
+<label class="choice" for="element_1_6">“He sido una persona prudente, quizás a veces escéptica. Tiendo a analizar los futuros problemas que puede acarrear una decisión”</label>
+<input id="element_1_7" name="radio106" class="element checkbox" type="radio"   [(ngModel)]="answers['106']"
+    [value]="6"/>
+<label class="choice" for="element_1_7">“Tiendo a sentir nerviosismo y ansiedad. También dudas al tomar decisiones.”</label>
+<input id="element_1_8" name="radio107" class="element checkbox" type="radio"   [(ngModel)]="answers['107']"
+    [value]="6"/>
+<label class="choice" for="element_1_8">“Me siento seguro y tranquilo haciendo lo que se espera de mí. A veces me cuesta decidir y obrar por mi cuenta.”</label>
+<input id="element_1_9" name="radio108" class="element checkbox" type="radio"   [(ngModel)]="answers['108']"
+    [value]="6"/>
+<label class="choice" for="element_1_9">“En ocasiones he puesto a prueba a mis seres queridos para ver si estaban de mi lado y me estaban siendo fieles.”</label>
+<input id="element_1_10" name="radio109" class="element checkbox" type="radio"   [(ngModel)]="answers['109']"
+    [value]="6" />
+<label class="choice" for="element_1_10">“Soy una persona muy simpática y amable. Pero reconozco que cuando me enfado tengo explosiones que, aunque duran poco tiempo, dejo a los demás sorprendidos"</label>
+<input id="element_1_11" name="radio110" class="element checkbox" type="radio"   [(ngModel)]="answers['110']"
+    [value]="6" />
+<label class="choice" for="element_1_11">“A veces cuando me he sentido inseguro he reaccionado poniéndome a la defensiva y volviéndome discutidor y a veces hasta agresivo.”</label>
+<input id="element_1_12" name="radio111" class="element checkbox" type="radio"   [(ngModel)]="answers['111']"
+    [value]="6" />
+<label class="choice" for="element_1_12">“Estoy orgulloso de ser una persona responsable, perseverante, sensata, compasiva, trabajadora y comprometida con mis amigos y familiares.”</label>
+<input id="element_1_13" name="radio112" class="element checkbox" type="radio"   [(ngModel)]="answers['112']"
+    [value]="6" />
+<label class="choice" for="element_1_13">“Muchas veces he temido sentirme solo y abandonado ante el futuro.”</label>
+<input id="element_1_14" name="radio113" class="element checkbox" type="radio"   [(ngModel)]="answers['113']"
+    [value]="6" />
+<label class="choice" for="element_1_14">“Estoy siempre alerta ante el peligro. Es como si estuviera en permanente preocupación por los posibles problemas que pudieran suceder.</label>
+<input id="element_1_15" name="radio114" class="element checkbox" type="radio"   [(ngModel)]="answers['114']"
+    [value]="6" />
+<label class="choice" for="element_1_15">“Me encantaría que existiera un manual de reglas correctas, buenas normas, pautas claras y métodos específicos para saber hacerlo todo bien.”</label>
+<input id="element_1_16" name="radio115" class="element checkbox" type="radio"   [(ngModel)]="answers['115']"
+    [value]="6" />
+<label class="choice" for="element_1_16">“Soy una persona muy comprometida con mis obligaciones sociales.”</label>
+<input id="element_1_17" name="radio116" class="element checkbox" type="radio"   [(ngModel)]="answers['116']"
+    [value]="6" />
+<label class="choice" for="element_1_17">“Me gusta tener a mi alrededor un entorno seguro. Cuando tengo que tomar decisiones sobre el futuro pienso mucho porque quiero saber lo que va a suceder”</label>
+<input id="element_1_18" name="radio117" class="element checkbox" type="radio"   [(ngModel)]="answers['117']"
+    [value]="6" />
+<label class="choice" for="element_1_18">“El deber y la responsabilidad son valores muy importantes para mi.”</label>
+<input id="element_1_19" name="radio118" class="element checkbox" type="radio"   [(ngModel)]="answers['118']"
+    [value]="6" />
+<label class="choice" for="element_1_19">“Creo que me “rayo” mucho y le doy muchas vueltas a las cosas. Ansiedad podría ser mi segundo apellido, sobre todo cuando siento que hay peligros alrededor mío"</label>
+<input id="element_1_20" name="radio119" class="element checkbox" type="radio"   [(ngModel)]="answers['119']"
+    [value]="6" />
+<label class="choice" for="element_1_20">“Puedo pasar de ser muy escéptico a muy inocente (a dejarme engañar totalmente por algo). Es muy extraño.”</label>
+<!-- El entusiaste -->
+<input id="element_1_1" name="radio120" class="element checkbox" type="radio"  [(ngModel)]="answers['120']"
+    [value]="7"  />
+<label class="choice" for="element_1_1">“Realmente me gusta disfrutar de la vida. Generalmente soy optimista, alegre y desinhibido.”</label>
+<input id="element_1_2" name="radio121" class="element checkbox" type="radio"  [(ngModel)]="answers['121']"
+    [value]="7"  />
+<label class="choice" for="element_1_2">“Odio el aburrimiento. Yo soy una persona muy activa y enérgica. ¡hay tantas cosas por hacer y tan poco tiempo para vivirlo todo!”</label>
+<input id="element_1_3" name="radio122" class="element checkbox" type="radio"  [(ngModel)]="answers['122']"
+    [value]="7"  />
+<label class="choice" for="element_1_3">“Me gusta estar en movimiento. Suelo pasar de una tarea a otra. Ese es mi estilo.”</label>
+<input id="element_1_4" name="radio123" class="element checkbox" type="radio"  [(ngModel)]="answers['123']"
+    [value]="7"  />
+<label class="choice" for="element_1_4">“Me gusta como soy. Y generalmente las personas me caen bien y yo a ellas.”</label>
+<input id="element_1_5" name="radio124" class="element checkbox" type="radio"  [(ngModel)]="answers['124']"
+    [value]="7"  />
+<label class="choice" for="element_1_5">“En general, acabo consiguiendo lo que quiero. Cuando deseo algo, acabo encontrando la manera de obtenerlo.”</label>
+<input id="element_1_6" name="radio125" class="element checkbox" type="radio"  [(ngModel)]="answers['125']"
+    [value]="7"  />
+<label class="choice" for="element_1_6">“Deseo libertad e independencia. Valoro también el compromiso con el trabajo y las personas, pero a veces siento que ‘me cortan las alas’ y me siento insatisfecho”</label>
+<input id="element_1_7" name="radio126" class="element checkbox" type="radio"  [(ngModel)]="answers['126']"
+    [value]="7"  />
+<label class="choice" for="element_1_7">“Me encanta viajar, descubrir nuevos lugares, sabores, experiencias y vivencia.”</label>
+<input id="element_1_8" name="radio127" class="element checkbox" type="radio"  [(ngModel)]="answers['127']"
+    [value]="7"  />
+<label class="choice" for="element_1_8">“Cuando veo personas tristes o desmotivadas, intento que se alegren un poco y que vean el lado bueno de las cosas.”</label>
+<input id="element_1_9" name="radio128" class="element checkbox" type="radio"  [(ngModel)]="answers['128']"
+    [value]="7"  />
+<label class="choice" for="element_1_9">“Una de mis virtudes es crear nuevas ideas y entusiasmar con ellas a los demás.”</label>
+<input id="element_1_10" name="radio129" class="element checkbox" type="radio"  [(ngModel)]="answers['129']"
+    [value]="7"  />
+<label class="choice" for="element_1_10">“Generalmente me considero una persona extrovertida, abierta y social.”</label>
+<input id="element_1_11" name="radio130" class="element checkbox" type="radio"  [(ngModel)]="answers['130']"
+    [value]="7" />
+<label class="choice" for="element_1_11">“Ante la presión de los demás, a veces me he vuelto agresivo. No me gusta que me coarten mi libertad.”</label>
+<input id="element_1_12" name="radio131" class="element checkbox" type="radio"  [(ngModel)]="answers['131']"
+    [value]="7" />
+<label class="choice" for="element_1_12">“Mi mente no para de charlar y parlotear, ¡a veces es un torbellino! Puedo estar pensando 10 cosas al mismo tiempo.”</label>
+<input id="element_1_13" name="radio132" class="element checkbox" type="radio"  [(ngModel)]="answers['132']"
+    [value]="7"  />
+<label class="choice" for="element_1_13">“Me gusta planificar y tener siempre posibilidades abiertas. Me gusta la emoción y la variedad. Me siento bien cuando veo mi agenda llena de actividades.”</label>
+<input id="element_1_14" name="radio133" class="element checkbox" type="radio"  [(ngModel)]="answers['133']"
+    [value]="7"  />
+<label class="choice" for="element_1_14">“Quizás uno de mis mayores problemas sea que me distraigo con facilidad y me disperso demasiado con todas las cosas que hay por conocer y experimentar. Me cuesta bajar el ritmo.”</label>
+<input id="element_1_15" name="radio134" class="element checkbox" type="radio"  [(ngModel)]="answers['134']"
+    [value]="7"  />
+<label class="choice" for="element_1_15">“Si algo me empieza a dejar de gustar, dejo de hacerlo. He empezado muchas actividades que al cabo de un tiempo he dejado de hacer porque he visto que no me apetecía seguir haciéndolo.”</label>
+<input id="element_1_16" name="radio135" class="element checkbox" type="radio"  [(ngModel)]="answers['135']"
+    [value]="7"  />
+<label class="choice" for="element_1_16">“Tiendo a gastar más dinero del que probablemente debería. Pero para eso está el dinero, para gastarlo, ¡que la vida son dos días!”</label>
+<input id="element_1_17" name="radio136" class="element checkbox" type="radio"  [(ngModel)]="answers['136']"
+    [value]="7"  />
+<label class="choice" for="element_1_17">“Me encanta estar con gente siempre que quieran ir donde yo voy.”</label>
+<input id="element_1_18" name="radio137" class="element checkbox" type="radio"  [(ngModel)]="answers['137']"
+    [value]="7"  />
+<label class="choice" for="element_1_18">“Me comprometo bastante cuando estoy en una relación, y puedo hacer grandes sacrificios por ayudar a esa persona. Pero cuando termina, paso a otra cosa.”</label>
+<input id="element_1_19" name="radio138" class="element checkbox" type="radio"  [(ngModel)]="answers['138']"
+    [value]="7"  />
+<label class="choice" for="element_1_19">“No soy solo una persona divertida, también tengo mi lado serio y soy muy claro, digo lo que otros habrían deseado tener el coraje de decir.”</label>
+<input id="element_1_20" name="radio139" class="element checkbox" type="radio"  [(ngModel)]="answers['139']"
+    [value]="7"  />
+<label class="choice" for="element_1_20">“No soy experto en una única cosa, pero conozco y hago muchas cosas bien. Me gusta estar abierto a la aventura y a las nuevas experiencias.”</label>
+<!-- El protector -->
+<input id="element_1_1" name="radio140" class="element checkbox" type="radio"  [(ngModel)]="answers['140']"
+    [value]="8" />
+<label class="choice" for="element_1_1">“Me considero una persona fuerte y justa. En muchas ocasiones otras personas han dependido de mi fortaleza y de mi capacidad de decisión y acción.”</label>
+<input id="element_1_2" name="radio141" class="element checkbox" type="radio"  [(ngModel)]="answers['141']"
+    [value]="8" />
+<label class="choice" for="element_1_2">“Cuando he tenido que enfrentarme con alguien, reconozco que con frecuencia he sido demasiado directo y duro. A veces tengo que contener mi agresividad.”</label>
+<input id="element_1_3" name="radio142" class="element checkbox" type="radio"  [(ngModel)]="answers['142']"
+    [value]="8" />
+<label class="choice" for="element_1_3">“Aunque por fuera suela dar una imagen de persona dura y firme, en mi interior tengo un lado tierno, e incluso sensible y sentimental que no suelo mostrar.”</label>
+<input id="element_1_4" name="radio143" class="element checkbox" type="radio"  [(ngModel)]="answers['143']"
+    [value]="8" />
+<label class="choice" for="element_1_4">“Desde niño he sido una persona que se ha fortalecido y se ha hecho a sí misma.”</label>
+<input id="element_1_5" name="radio144" class="element checkbox" type="radio"  [(ngModel)]="answers['144']"
+    [value]="8" />
+<label class="choice" for="element_1_5">“Creo que lo más importante en la vida es confiar en uno mismo. Generalmente, he confiado solo en mí mismo.”</label>
+<input id="element_1_6" name="radio145" class="element checkbox" type="radio"  [(ngModel)]="answers['145']"
+    [value]="8" />
+<label class="choice" for="element_1_6">“A veces tiendo a ser dominante, controlador y exigente. A veces esto me ha ocasionado problemas con la gente. Me echan en cara que “mando” demasiado.”</label>
+<input id="element_1_7" name="radio146" class="element checkbox" type="radio"  [(ngModel)]="answers['146']"
+    [value]="8" />
+<label class="choice" for="element_1_7">“Nunca he agachado la cabeza ante una situación conflictiva con otra persona.”</label>
+<input id="element_1_8" name="radio147" class="element checkbox" type="radio"  [(ngModel)]="answers['147']"
+    [value]="8" />
+<label class="choice" for="element_1_8">“Cuando las situaciones se han puesto ‘calientes’ me he lanzado a afrontarlas directamente, aunque sea haciéndolo yo solo.”</label>
+<input id="element_1_9" name="radio148" class="element checkbox" type="radio"  [(ngModel)]="answers['148']"
+    [value]="8" />
+<label class="choice" for="element_1_9">“A veces he irritado y he hecho llorar a los demás por ser demasiado agresivo.”</label>
+<input id="element_1_10" name="radio149" class="element checkbox" type="radio"  [(ngModel)]="answers['149']"
+    [value]="8"  />
+<label class="choice" for="element_1_10">“No me callo la boca. Cuando me he enfadado se lo digo a la cara a la gente.”</label>
+<input id="element_1_11" name="radio150" class="element checkbox" type="radio"  [(ngModel)]="answers['150']"
+    [value]="8"  />
+<label class="choice" for="element_1_11">“Desde siempre he sentido la necesidad de ser un “pilar de fortaleza y valor”, he tenido que ayudar a personas a salir de sus problemas.”</label>
+<input id="element_1_12" name="radio151" class="element checkbox" type="radio"  [(ngModel)]="answers['151']"
+    [value]="8"  />
+<label class="choice" for="element_1_12">“A veces me preocupa que si bajo la guardia alguien se aprovechará de mí.”</label>
+<input id="element_1_13" name="radio152" class="element checkbox" type="radio"  [(ngModel)]="answers['152']"
+    [value]="8"  />
+<label class="choice" for="element_1_13">“No me han dado miedo las situaciones difíciles. Incluso me han gustado las situaciones de alta tensión. Soy una persona que siempre ha tirado hacia delante.”</label>
+<input id="element_1_14" name="radio153" class="element checkbox" type="radio"  [(ngModel)]="answers['153']"
+    [value]="8"  />
+<label class="choice" for="element_1_14">“No siento ninguna compasión por los cobardes y por los débiles de carácter. Pero sí siento la necesidad de luchar por proteger a los inocentes (niños, ancianos...)”</label>
+<input id="element_1_15" name="radio154" class="element checkbox" type="radio"  [(ngModel)]="answers['154']"
+    [value]="8"  />
+<label class="choice" for="element_1_15">“Me gusta cuidar de ‘mi gente’, cuando quiero a las personas siento la necesidad de protegerles y de procurar que estén bien.”</label>
+<input id="element_1_16" name="radio155" class="element checkbox" type="radio"  [(ngModel)]="answers['155']"
+    [value]="8"  />
+<label class="choice" for="element_1_16">“Tengo una fuerte voluntad. Pocas cosas me dan miedo y me echan para atrás.”</label>
+<input id="element_1_17" name="radio156" class="element checkbox" type="radio"  [(ngModel)]="answers['156']"
+    [value]="8"  />
+<label class="choice" for="element_1_17">“Una de las cosas que me hace sentir más orgulloso es ver valerse por su cuenta a una persona que ha estado bajo mi protección.”</label>
+<input id="element_1_18" name="radio157" class="element checkbox" type="radio"  [(ngModel)]="answers['157']"
+    [value]="8"  />
+<label class="choice" for="element_1_18">“Me ha gustado siempre ese lado mío desafiador, saco a las personas de su comodidad para que lleguen a hacer todo lo que son capaces de hacer.”</label>
+<input id="element_1_19" name="radio158" class="element checkbox" type="radio"  [(ngModel)]="answers['158']"
+    [value]="8"  />
+<label class="choice" for="element_1_19">“Hay momentos en los que vivo violentos estallidos de cólera, pero se me pasan al poco tiempo.”</label>
+<input id="element_1_20" name="radio159" class="element checkbox" type="radio"  [(ngModel)]="answers['159']"
+    [value]="8"  />
+<label class="choice" for="element_1_20">“Me gusta sentirme vivo cuando hago algo que otros creen difícil o imposible. Me gusta sentir que controlo mi vida y mi mundo, y que nada ni nadie me limite.”</label>
+<!-- El pacifico -->
+<input id="element_1_1" name="radio160" class="element checkbox" type="radio"  [(ngModel)]="answers['160']"
+    [value]="9"/>
+<label class="choice" for="element_1_1">“Me considero una persona pacífica. Creo que es importante mantener la calma, la estabilidad y la paz mental. No me gustan los conflictos.”</label>
+<input id="element_1_2" name="radio161" class="element checkbox" type="radio"  [(ngModel)]="answers['161']"
+    [value]="9"/>
+<label class="choice" for="element_1_2">“Me gusta que las cosas sigan como están, sigan el orden que existe. No soporto el caos, el estrés y la hiperactividad.”</label>
+<input id="element_1_3" name="radio162" class="element checkbox" type="radio"  [(ngModel)]="answers['162']"
+    [value]="9"/>
+<label class="choice" for="element_1_3">“Mi frases de vida podrían ser perfectamente: ‘paz y amor’, ‘vive y deja vivir’”.</label>
+<input id="element_1_4" name="radio163" class="element checkbox" type="radio"  [(ngModel)]="answers['163']"
+    [value]="9"/>
+<label class="choice" for="element_1_4">“A lo largo de mi vida he sido una persona estable y tranquila, con una suave corriente de energía en mi interior.”</label>
+<input id="element_1_5" name="radio164" class="element checkbox" type="radio"  [(ngModel)]="answers['164']"
+    [value]="9"/>
+<label class="choice" for="element_1_5">“Me veo a mi mismo como una persona optimista, alegre y despreocupada.”</label>
+<input id="element_1_6" name="radio165" class="element checkbox" type="radio"  [(ngModel)]="answers['165']"
+    [value]="9"/>
+<label class="choice" for="element_1_6">“Me sorprende que la gente se centre tanto en lo negativo y se preocupe tanto por los problemas cuando hay tantas cosas bonitas en la vida.”</label>
+<input id="element_1_7" name="radio166" class="element checkbox" type="radio"  [(ngModel)]="answers['166']"
+    [value]="9"/>
+<label class="choice" for="element_1_7">“Me gusta llevarme bien con los demás. Prefiero no imponerme a la gente y me siento cómodo si otra persona toma el mando y se hace cargo de la situación.”</label>
+<input id="element_1_8" name="radio167" class="element checkbox" type="radio"  [(ngModel)]="answers['167']"
+    [value]="9"/>
+<label class="choice" for="element_1_8">“Siempre he tendido a pensar que las cosas al final saldrán bien.”</label>
+<input id="element_1_9" name="radio168" class="element checkbox" type="radio"  [(ngModel)]="answers['168']"
+    [value]="9"/>
+<label class="choice" for="element_1_9">“No me gusta presionar ni sentirme presionado por nadie. Las cosas pueden hacerse más tranquilamente.”</label>
+<input id="element_1_10" name="radio169" class="element checkbox" type="radio"  [(ngModel)]="answers['169']"
+    [value]="9" />
+<label class="choice" for="element_1_10">“Normalmente he evitado las situaciones difíciles, de alta tensión, donde los ánimos están por las nubes. Prefiero desaparecer hasta que pase la tormenta.”</label>
+<input id="element_1_11" name="radio170" class="element checkbox" type="radio"  [(ngModel)]="answers['170']"
+    [value]="9" />
+<label class="choice" for="element_1_11">“En ocasiones me han echado en cara que soy demasiado tranquilo y pasivo.”</label>
+<input id="element_1_12" name="radio171" class="element checkbox" type="radio"  [(ngModel)]="answers['171']"
+    [value]="9" />
+<label class="choice" for="element_1_12">“Creo que funciono por inercias: cuando trabajo, trabajo mucho y cuando estoy descansando, se me pasa el tiempo sin enterarme. Me cuesta cambiar de estado.”</label>
+<input id="element_1_13" name="radio172" class="element checkbox" type="radio"  [(ngModel)]="answers['172']"
+    [value]="9" />
+<label class="choice" for="element_1_13">“Generalmente es difícil hacerme enfadar. Creo que tengo mucha paciencia.”</label>
+<input id="element_1_14" name="radio173" class="element checkbox" type="radio"  [(ngModel)]="answers['173']"
+    [value]="9" />
+<label class="choice" for="element_1_14">“Suelo postergar las cosas casi hasta el último minuto, pero al final casi siempre las llevo a cabo.”</label>
+<input id="element_1_15" name="radio174" class="element checkbox" type="radio"  [(ngModel)]="answers['174']"
+    [value]="9" />
+<label class="choice" for="element_1_15">“Me dicen que soy bastante testarudo, pero es que no soporto cuando alguien me intenta controlar y me dice lo que tengo que hacer y no hacer.”</label>
+<input id="element_1_16" name="radio175" class="element checkbox" type="radio"  [(ngModel)]="answers['175']"
+    [value]="9" />
+<label class="choice" for="element_1_16">“Me gusta tener relaciones estables, tranquilas, buenas, armoniosas con los demás. Me gusta estar con mi pareja y mis amigos. Me siento muy unido a todos.”</label>
+<input id="element_1_17" name="radio176" class="element checkbox" type="radio"  [(ngModel)]="answers['176']"
+    [value]="9" />
+<label class="choice" for="element_1_17">“Me gusta escuchar a las personas. Ellas saben que yo estoy ahí siempre para escucharles y ofrecerles todo mi apoyo. Sienten que les transmito paz y armonía.”</label>
+<input id="element_1_18" name="radio177" class="element checkbox" type="radio"  [(ngModel)]="answers['177']"
+    [value]="9" />
+<label class="choice" for="element_1_18">“Me gusta saber que voy a tener tiempo para relajarme todos los días, tener mis tiempos de calma y entretenimiento.”</label>
+<input id="element_1_19" name="radio178" class="element checkbox" type="radio"  [(ngModel)]="answers['178']"
+    [value]="9" />
+<label class="choice" for="element_1_19">“He de reconocer que se me pasa el tiempo sin enterarme. Si no dispongo de un horario y una rutina diaria puedo pasar el día sin haber hecho nada productivo.”</label>
+<input id="element_1_20" name="radio179" class="element checkbox" type="radio"  [(ngModel)]="answers['179']"
+    [value]="9" />
+<label class="choice" for="element_1_20">“Cuando vivo o trabajo con otras personas me cuesta determinar exactamente lo que quiero. Me resulta complicado tomar decisiones, veo muchos pros y contras.”</label>
+</span>
+<!-- Enviar -->
+<button class="btn btn-primary " type="submit">
+    Guardar
+  </button>
+</form>
+</div>

@@ -1,0 +1,13 @@
+.abs-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+.titulo{
+    color:#007bff;
+}  
+
+.enunciado{
+    font-weight: bold;
+    border-left: 2px;
+}

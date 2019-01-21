@@ -1,0 +1,128 @@
+<div class="container" *ngIf="institution" #content>
+
+    <h6>Nombre de la institucion: {{institution.name }}</h6>
+    <h6 style="color:red;">Codigo de grupo: {{institution.code}} </h6>
+  <div>
+    <h1 class="font-weight-bold">Resultados grupales de puntajes del test de personalidad</h1>
+    <p>El resultado corresponde al promedio de los valores de los test de los integrantes de la empresa</p>
+
+    <label>
+      <h2>Reformador: {{ institution.reformador }}</h2>
+      idealista, de sólidos principios. Ético y concienzudo, posee un fuerte sentido del bien y del mal. Le llama la
+      difusión, la divulgación y hasta el adoctrinamiento, a veces con una misión o cruzada. Se esfuerza siempre por
+      mejorar las cosas y teme cometer errores. Bien organizado, ordenado y meticuloso, trata de mantener valores
+      elevados, pero puede resultar excesivamente crítico y perfeccionista.
+    </label>
+
+    <label>
+      <h2>Ayudador: {{institution.ayudador}}</h2>
+      Es una persona orientada a las demás, comprensiva, sincera, bondadosa, amistosa, generosa y hasta abnegada, pero
+      también puede ser excesivamente preocupada, sentimental y aduladora. Desea intimar con otras personas y suele
+      hacer cosas por los demás para sentirse necesitado.
+    </label>
+
+    <label>
+      <h2>Triunfador: {{institution.triunfador}}</h2>
+      Adaptable y orientado al éxito. Seguros de sí mismos, atractivos y encantadores. Ambiciosos, competentes y
+      energéticos; conscientes del status y buscan avance personal. Preocupados de la imagen y lo que los demás piensen
+      de ellos. Problemas con competitividad y trabajólicos. En su mejor estado: Auténticos, se aceptan y son todo lo
+      que parecen ser. Modelos que inspiran a otros.
+    </label>
+    <label>
+      <h2>Artista: {{institution.artista}}</h2>
+      La motivación que los mueve es el deseo o necesidad de realizarse como persona a través de vivir intensas
+      emociones.
+
+      Se le llama “El artista o el Especial” porque busca la perfección, hacer las cosas bien y cambiar aquello que ve
+      que está mal (según sus criterios subjetivos, claro está).
+
+      Y es esta motivación por ser bueno, ser correcto y tener razón (las 3 cosas son lo mismo) son la base de todos
+      sus hábitos, estrategias de conducta y formas de pensar.
+    </label>
+
+    <label>
+      <h2>Pensador: {{institution.pensador}}</h2>
+      tienes esta personalidad si eres de aquellas personas que les encanta leer, estudiar y aprender. Siempre te
+      encuentras tratando de resolver un problema. Eres muy lógico y racional.
+      Tiendes a racionalizar tus sentimientos y no guiarte por tu intuición. Esto puede perjudicar tus relaciones
+      personales, si dejas espacio al azar, te convertirás en una persona muy sabia.
+    </label>
+
+    <label>
+      <h2>Leal: {{institution.leal}} </h2>
+      El tipo comprometido, orientado a la seguridad. Persona digna de confianza, trabajadora y responsable, pero
+      también puede adoptar una actitud defensiva, ser evasiva y muy nerviosa. Trabaja hasta estresarse, al tiempo que
+      se queja de ello. Suele ser cautelosa e indecisa, pero también reactiva, desafiante y rebelde.
+    </label>
+    <label>
+      <h2>Entusiasta: {{institution.entusiasta}} </h2>
+      tienes esta personalidad si te encuentras en permanente movimiento. Estás dotado con una gran energía que parece
+      nunca acabar. Te gusta ser productivo y no puedes estar sin hacer nada.
+      Eres demasiado impulsivo, si te tomas el tiempo para reflexionar, los resultados que obtendrás en tus proyectos,
+      serán mejores.
+    </label>
+
+    <label>
+      <h2>Protector: {{ institution.protector }}</h2>
+      tienes esta personalidad si sueles ser el líder o coordinador natural de los equipos. Tienes gran capacidad para
+      gestionar grandes emprendimientos. Eres muy seguro de ti mismo.
+      Sueles tener problemas para delegar tareas y confiar en los demás. Recuerda que los mejores trabajos son los que
+      se hacen grupalmente.
+
+    </label>
+
+    <label>
+      <h2>Pacifico: {{ institution.pacifico}}</h2>
+      El tipo acomodadizo. Persona conformista, confiada y estable. Es afable y bondadosa, pero también puede estar
+      demasiado dispuesta a transigir con los demás para mantener la paz. Desea que todo vaya sobre ruedas, sin
+      conflictos, pero tiende a minimizar problemas.
+    </label>
+    <br>
+    <hr>
+    <div>
+      <label>
+        Test realizado a la fecha: &nbsp;{{ (institution.created_at | amFromUnix) | amDateFormat:'MM/DD/YYYY ' }}
+      </label>
+
+      <div *ngIf="barChartData" class="grafic">
+        <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend"
+          [chartType]="barChartType"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <h1>Test de estilos de aprendizaje</h1>
+  <p>El resultado corresponde al promedio de los valores de los test de los integrantes de la empresa</p>
+<!-- Test de estilos de aprendizaje -->
+<label>
+    <h2>Visual: {{ institution.visual }}</h2>
+    Tienen un alto nivel de energía, son inquietas y observadoras, captan el detalle y muchos de los pequeños
+    aspectos que a otras personas se les pasan por alto. Suelen visualizar imágenes en su mente para poder
+    recordarlas, y es común que para hacerlo, deban escribirse pequeñas notas o apuntes. Necesitan lugares
+    tranquilos para concentrarse.
+</label>
+
+<label>
+    <h2>Auditivo: {{institution.auditivo}}</h2>
+    Según la PNL son personas más relajadas, comunicativas y con grandes dotes de expresión, les gusta
+    conversar y recuerdan con gran detalle cada una de las palabras que han escuchado.
+
+</label>
+
+<label>
+    <h2>Cinestesico: {{institution.cinestesico}}</h2>
+    <p>No tienen especial interés por los detalles como pueden ser las personas más “visuales”, pero eso sí, son
+    más espontáneas y con tendencia a buscar emociones en primera persona.</p>
+</label>
+<br>
+<hr>
+    <div *ngIf="barChartData2" class="grafic">
+        <canvas baseChart [datasets]="barChartData2" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend"
+          [chartType]="barChartType"></canvas>
+      </div>
+</div>
+<div class="container">
+  <h3>Descargar como PDF </h3>
+  <!-- Boton para descargar pdf -->
+  <button class="btn btn-secondary" type="button" (click)="downloadPDF()">Descargar a PDF</button>
+</div>

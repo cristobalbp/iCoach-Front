@@ -1,0 +1,10 @@
+<div id="institutions" class="container">
+		<div *ngFor="let institution of institution" >
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<h4>Reportes de la empresa {{ institution.name }}</h4>
+					<a [routerLink]="['/result-institution/',institution._id]" class="btn btn-warning">Ver mis resultados </a>
+				</div>
+			</div>
+		</div>
+	</div>

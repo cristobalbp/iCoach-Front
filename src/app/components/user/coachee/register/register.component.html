@@ -1,0 +1,80 @@
+<div class="col-xs-12 panel-body abs-center" >
+   <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)" class="form"  >
+    <h2 class="text-center"><strong>Crear</strong> una cuenta.</h2>
+    <div class="form-group">
+      <input class="form-control"  type="text" name="name" placeholder="Nombre" #name="ngModel" [(ngModel)]="user.name" required />
+      <span *ngIf="!name.valid && name.touched"> El ingreso es obligatorio </span>
+    </div>
+
+    <div class="form-group">
+      <input class="form-control"  type="text" name="lastname" placeholder="Apellidos" #lastname="ngModel" [(ngModel)]="user.lastname" required />
+      <span *ngIf="!lastname.valid && lastname.touched">El ingreso es obligatorio </span>
+    </div>
+
+    <div class="form-group">
+      <input class="form-control"  type="text" name="rut" placeholder="Ingrese Rut" #rut="ngModel" [(ngModel)]="user.rut" required pattern="\d{8}-[\d|kK]{1}" />
+      <span *ngIf="!rut.valid && rut.touched">El ingreso es obligatorio o el rut no es valido </span>
+    </div>
+    
+
+    <div class="form-group">
+      <label for="yearold"> Fecha de nacimiento </label>
+      <input class="form-control" type="date" name="yearold" placeholder="Edad" #yearold="ngModel" [(ngModel)]="user.yearold" required />
+      <span *ngIf="!email.valid && email.touched">El ingreso es obligatorio</span>
+    </div>
+
+    <div class="form-group">
+      <input class="form-control" type="email" name="email" placeholder="Correo" #email="ngModel" [(ngModel)]="user.email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/>
+      <span *ngIf="!email.valid && email.touched">El correo es invalido</span>
+    </div>
+    
+    <div class="form-group">
+      <label for="gender" > Selecione su genero </label>
+      <select class="form-control" name="gender" id="gender" #gender="ngModel" [(ngModel)]="user.gender">
+        <option value="Femenino"> Femenino </option>
+        <option value="Masculino"> Masculino </option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="institution"> institución a la que pertenece: {{ identity2.name}}  </label>
+      <input class="form-control"  type="text" name="Nombre de su institution" placeholder="debe ingresar el nombre asignado" #institution="ngModel" [(ngModel)]="user.institution" required />
+      <span *ngIf="!institution.valid && institution.touched">El ingreso es obligatorio </span>
+    </div>
+
+    <div class="form-group">
+        <label for="institution_code"> codigo que debe ingresar es: <h4 style="color:red;">{{ identity2.code}}</h4>  </label>
+        <input class="form-control"  type="text" name="codigo de su institution" placeholder="debe ingresar el codigo asignado" #institution_code="ngModel" [(ngModel)]="user.institution_code" required />
+        <span *ngIf="!institution_code.valid && institution_code.touched">El ingreso es obligatorio </span>
+      </div>
+
+    <label for="personas_cargo">Ingrese la cantidad de personas a cargo</label>
+    <div class="form-group">
+      <input class="form-control"  type="number" name="personas_cargo" placeholder="personas_cargo" #personas_cargo="ngModel" [(ngModel)]="user.personas_cargo" required />
+      <span *ngIf="!personas_cargo.valid && personas_cargo.touched">Ingrese la cantidad de personas que tiene a cargo </span>
+    </div>
+    <div class="form-group">
+      <input class="form-control" type="password" name="password" placeholder="Contraseña" #password="ngModel" [(ngModel)]="user.password" required />
+      <span *ngIf="!password.valid && password.touched">El ingreso es obligatorio</span>
+    </div>
+
+  <hr>
+
+    <div class="form-group">
+      <input class="btn btn-primary btn-block" type="submit" (click)="logOut()" [disabled]="!registerForm.form.valid"/>
+    </div>
+    <br>
+    <a [routerLink]="['/login']" [routerLinkActive]="['actived']" class="already" (click)="logOut()">¿Ya tienes una cuenta? Ingresa aquí </a>
+    <br>
+    <div class="alert alert-success" *ngIf="status == 'success'">
+        Registro completado, <a [routerLink]="['/login']" [routerLinkActive]="['actived']" class="already"><strong>Inicia</strong> sesión</a>
+      </div>
+      <div class="alert alert-danger" *ngIf="status == 'error'">
+          Ha ocurrido un error, puede que el usuario ya este en uso, <strong>Intentalo nuevamente.</strong>  
+    </div>
+  
+  </form>
+  
+</div>
+            
+              
+     

@@ -1,0 +1,40 @@
+<div class="  panel-default panel-body"> 
+<div class="alert alert-success" *ngIf="status == 'success'">
+		Publicacion enviada correctamente
+</div>
+<div class="alert alert-danger" *ngIf="status == 'error'">
+		Publicacion no enviada 
+</div>
+
+<div class="row">
+		<div class="col-sm-5 ">
+		  <div class="card ">
+			<div class="card-body">
+			<img src="{{url + 'get-image-user/' + identity.image}}" *ngIf="identity.image" class="avatar rounded-circle"/>
+			<img src="assets/images/user.png" *ngIf="!identity.image" class="avatar rounded-circle"/>
+			  <h5 class="card-title">{{identity.name + ' ' + identity.lastname}} </h5>
+			  <p class="card-text">Estadisticas actuales</p>
+				<a class="btn btn-light">Participantes: {{stats.following}} | Publicaciones: {{stats.publications}}</a>			
+			</div>
+		  </div>
+		</div>
+		<div class="col-sm-5 ">
+		  <div class="card ">
+			<form class="card-body" #newPubForm="ngForm" (ngSubmit)="onSubmit(newPubForm, $event)">
+			  <h5 class="card-title">Escribe una publicación</h5>
+				<div class="input-group">
+						<textarea name="text" #text="ngModel" [(ngModel)]="publication.text" class="form-control"></textarea>
+						<span *ngIf="!text.valid && text.touched">
+								El texto de la publicacion es obligatorio
+							</span>
+				</div>		
+				<p>
+						<label>Sube una imagen</label>
+						<input type="file" placeholder="Subir" (change)="fileChangeEvent($event)"/>
+				</p>
+				<input type="submit" [disabled]="!newPubForm.form.valid"  class="btn btn-success">
+			</form>
+		  </div>
+		</div>
+</div>
+</div>

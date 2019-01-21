@@ -1,0 +1,30 @@
+<div class="  panel-default panel-body"> 
+  <div class="alert alert-success" *ngIf="status == 'success'">
+       Enviado correctamente
+  </div>
+  <div class="alert alert-danger" *ngIf="status == 'error'">
+      Bug no enviado 
+  </div>
+  
+  <div class="row">
+
+      <div class="col-sm-5 ">
+        <div class="card ">
+        <form class="card-body" #newPubForm="ngForm" (ngSubmit)="onSubmit(newPubForm, $event)">
+          <h5 class="card-title">Relata tu bug</h5>
+          <div class="input-group">
+              <textarea name="text" #text="ngModel" [(ngModel)]="bugsreport.text" class="form-control"></textarea>
+              <span *ngIf="!text.valid && text.touched">
+                  El texto es obligatorio
+                </span>
+          </div>		
+          <p>
+              <label>Sube una imagen del</label>
+              <input type="file" placeholder="Subir" (change)="fileChangeEvent($event)"/>
+          </p>
+          <input type="submit" [disabled]="!newPubForm.form.valid"  class="btn btn-success">
+        </form>
+        </div>
+      </div>
+  </div>
+  </div>

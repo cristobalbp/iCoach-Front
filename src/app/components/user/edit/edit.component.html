@@ -1,0 +1,212 @@
+<div class="col-lg-12 abs-center">
+	<div class="form" *ngIf="user.role_coach">
+		
+		<form #userEditForm="ngForm" (ngSubmit)="onSubmit()" class="col-lg-12" >
+			<h2 class="text-center">
+			<strong>Configura</strong> tu cuenta.
+			</h2>
+			<div>
+				<label>Nombre</label>
+				<input class="form-control"  type="text" name="name" #name="ngModel" [(ngModel)]="user.name" required />
+				<span *ngIf="!name.valid && name.touched"> El ingreso es obligatorio </span>
+			</div>
+			<div class="form-group">
+				<label>Apellidos</label>
+				<input class="form-control"  type="text" name="lastname"  #lastname="ngModel" [(ngModel)]="user.lastname" required />
+				<span *ngIf="!lastname.valid && lastname.touched">El ingreso es obligatorio </span>
+			</div>
+			
+			<div class="form-group">
+				<label>Fecha de nacimiento</label>
+				<input class="form-control" type="date" name="yearold"  #yearold="ngModel" [(ngModel)]="user.yearold" required />
+				<span *ngIf="!email.valid && email.touched">El ingreso es obligatorio</span>
+			</div>
+			<div class="form-group">
+				<label>Correo electronico</label>
+				<input class="form-control" type="email" name="email"  #email="ngModel" [(ngModel)]="user.email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" readonly="readonly" />
+				<span *ngIf="!email.valid && email.touched">El correo es invalido</span>
+			</div>
+			<div class="form-group">
+				<label>Formación academica</label>
+				<input class="form-control"  type="text" name="formation" #formation="ngModel" [(ngModel)]="user.formation" required />
+				<span *ngIf="!formation.valid && formation.touched"> El ingreso es obligatorio</span>
+			</div>
+			
+			<div class="form-group">
+				<label for="gender" > Selecione su genero </label>
+				<select class="form-control" name="gender" id="gender" #gender="ngModel" [(ngModel)]="user.gender">
+					<option value="Femenino"> Femenino </option>
+					<option value="Masculino"> Masculino </option>
+				</select>
+			</div>
+			<hr>
+			<div class="form-group">
+      <label for="region" > Selecione una o multiples regiones, debe seleccionar al menos una </label>
+      <select class="form-control" name="region1" id="region1" #region1="ngModel" [(ngModel)]="user.region1" required>
+        <option value="Arica y Parinacota"> Arica y Parinacota   </option>
+        <option value="Región de Tarapacá"> Región de Tarapacá </option>
+        <option value="Región de Antofagasta"> Región de Antofagasta </option>
+        <option value="Región de Atacama"> Región de Atacama </option>
+        <option value="Región de Coquimbo"> Región de Coquimbo </option>
+        <option value="Región de Valparaíso"> Región de Valparaíso </option>
+        <option value="Región Metropolitana de Santiago"> Región Metropolitana de Santiago </option>
+        <option value="Región del Libertador General Bernardo O'Higgins"> Región del Libertador General Bernardo O'Higgins </option>
+        <option value="Región del Maule"> Región del Maule </option>
+        <option value="Región de Ñuble"> Región de Ñuble </option>
+        <option value="Región del Biobío"> Región del Biobío </option>
+        <option value="Región de Los Ríos"> Región de Los Ríos </option>
+        <option value="Región de Los Lagos"> Región de Los Lagos </option>
+        <option value="Región de Aysén del General Carlos Ibáñez del Campo"> Región de Aysén del General Carlos Ibáñez del Campo </option>
+        <option value="Región de Magallanes y de la Antártica Chilena"> Región de Magallanes y de la Antártica Chilena </option>
+
+
+      </select>
+      <br>
+
+      <select class="form-control" name="region2" id="region2" #region2="ngModel" [(ngModel)]="user.region2">
+        <option value="Arica y Parinacota"> Arica y Parinacota   </option>
+        <option value="Región de Tarapacá"> Región de Tarapacá </option>
+        <option value="Región de Antofagasta"> Región de Antofagasta </option>
+        <option value="Región de Atacama"> Región de Atacama </option>
+        <option value="Región de Coquimbo"> Región de Coquimbo </option>
+        <option value="Región de Valparaíso"> Región de Valparaíso </option>
+        <option value="Región Metropolitana de Santiago"> Región Metropolitana de Santiago </option>
+        <option value="Región del Libertador General Bernardo O'Higgins"> Región del Libertador General Bernardo O'Higgins </option>
+        <option value="Región del Maule"> Región del Maule </option>
+        <option value="Región de Ñuble"> Región de Ñuble </option>
+        <option value="Región del Biobío"> Región del Biobío </option>
+        <option value="Región de Los Ríos"> Región de Los Ríos </option>
+        <option value="Región de Los Lagos"> Región de Los Lagos </option>
+        <option value="Región de Aysén del General Carlos Ibáñez del Campo"> Región de Aysén del General Carlos Ibáñez del Campo </option>
+        <option value="Región de Magallanes y de la Antártica Chilena"> Región de Magallanes y de la Antártica Chilena </option>
+      </select>
+
+      <br>
+
+      <select class="form-control" name="region3" id="region3" #region3="ngModel" [(ngModel)]="user.region3">
+         <option value="Arica y Parinacota"> Arica y Parinacota   </option>
+        <option value="Región de Tarapacá"> Región de Tarapacá </option>
+        <option value="Región de Antofagasta"> Región de Antofagasta </option>
+        <option value="Región de Atacama"> Región de Atacama </option>
+        <option value="Región de Coquimbo"> Región de Coquimbo </option>
+        <option value="Región de Valparaíso"> Región de Valparaíso </option>
+        <option value="Región Metropolitana de Santiago"> Región Metropolitana de Santiago </option>
+        <option value="Región del Libertador General Bernardo O'Higgins"> Región del Libertador General Bernardo O'Higgins </option>
+        <option value="Región del Maule"> Región del Maule </option>
+        <option value="Región de Ñuble"> Región de Ñuble </option>
+        <option value="Región del Biobío"> Región del Biobío </option>
+        <option value="Región de Los Ríos"> Región de Los Ríos </option>
+        <option value="Región de Los Lagos"> Región de Los Lagos </option>
+        <option value="Región de Aysén del General Carlos Ibáñez del Campo"> Región de Aysén del General Carlos Ibáñez del Campo </option>
+        <option value="Región de Magallanes y de la Antártica Chilena"> Región de Magallanes y de la Antártica Chilena </option>
+      </select>
+      
+    </div>
+    <hr>
+			<div class="form-group">
+				<label> Selecione metodo de pago, puedes seleccionar mas de uno. 
+
+				<p style="color: red; margin-top: 5%" > ATENCIÓN! si deseas cambiar tus datos debes volver a ingresar los medios de pago </p>
+
+				</label>
+				<p><input type="checkbox" name ="payment" value="Boleta" #payment_bolet="ngModel" [(ngModel)]="user.payment_bolet"/> Boleta </p>
+				<p><input type="checkbox" name ="payment" value="Factura30" #payment_facture30="ngModel" [(ngModel)]="user.payment_facture30"/> Factura [30 dias]</p>
+				<p><input type="checkbox" name ="payment" value="Factura60" #payment_facture60="ngModel" [(ngModel)]="user.payment_facture60"/> Factura [60 dias]</p>
+				<p><input type="checkbox" name ="payment" value="Factura90" #payment_facture90="ngModel" [(ngModel)]="user.payment_facture90"/> Factura [90 dias]</p>
+			</div>
+			<hr>
+			<div class="form-group">
+				<label > Escribe sobre tí </label>
+				<textarea class="form-control"  name="description"  #description="ngModel" [(ngModel)]="user.description"> </textarea>
+				
+				<span *ngIf="!description.valid && description.touched">El ingreso es obligatorio</span>
+			</div>
+			
+			<hr>
+			
+			<div *ngIf="user.image">
+				<img src="{{ url + 'get-image-user/' + user.image}}" class="avatar2"/>
+			</div>
+			<div class="form-group">
+				<label>Sube tu imagen de perfil</label>
+				<input type="file" placeholder="Subir Imagen" (change)="fileChangeEvent($event)"/>
+				<hr>
+			</div>
+
+			<div class="form-group">
+				<input class="btn btn-primary btn-block" type="submit" value="{{title}}"  [disabled]="!userEditForm.form.valid"/>
+			</div>
+			<div class="alert alert-success" *ngIf="status == 'success'">
+				Has actualizado tus datos correctamente
+			</div>
+			
+			<div class="alert alert-danger" *ngIf="status == 'err'">
+				No se a podido actualizar tus datos, puede que ya esten ingresados, <strong>Intentalo nuevamente.</strong>
+		</div>
+		</form>
+		
+		
+		
+	</div>
+	<!-- Configuracion del Coachee -->
+	<div class="form" *ngIf="user.role_coachee" >
+		<form #userEditForm="ngForm" (ngSubmit)="onSubmit()" class="col-lg-12" >
+			<h2 class="text-center">
+			<strong>Configura</strong> tu cuenta.
+			</h2>
+			<div>
+				<label>Nombre</label>
+				<input class="form-control"  type="text" name="name" #name="ngModel" [(ngModel)]="user.name" required />
+				<span *ngIf="!name.valid && name.touched"> El ingreso es obligatorio </span>
+			</div>
+			<div class="form-group">
+				<label>Apellidos</label>
+				<input class="form-control"  type="text" name="lastname"  #lastname="ngModel" [(ngModel)]="user.lastname" required />
+				<span *ngIf="!lastname.valid && lastname.touched">El ingreso es obligatorio </span>
+			</div>
+			
+			<div class="form-group">
+				<label>Fecha de nacimiento</label>
+				<input class="form-control" type="date" name="yearold"  #yearold="ngModel" [(ngModel)]="user.yearold" required />
+				<span *ngIf="!email.valid && email.touched">El ingreso es obligatorio</span>
+			</div>
+			<div class="form-group">
+				<label>Correo electronico</label>
+				<input class="form-control" type="email" name="email"  #email="ngModel" [(ngModel)]="user.email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" readonly="readonly" />
+				<span *ngIf="!email.valid && email.touched">El correo es invalido</span>
+			</div>
+			<div class="form-group">
+				<label for="sex" > Selecione su genero </label>
+				<select class="form-control" name="gender" id="gender" #gender="ngModel" [(ngModel)]="user.gender">
+					<option value="Femenino"> Femenino </option>
+					<option value="Masculino"> Masculino </option>
+				</select>
+			</div>
+			<hr>
+			
+			<div *ngIf="user.image">
+				<img src="{{ url + 'get-image-user/' + user.image}}" class="avatar2"/>
+			</div>
+			<div class="form-group">
+				<label>Sube tu imagen de perfil</label>
+				<input type="file" placeholder="Subir Imagen" (change)="fileChangeEvent($event)"/>
+				<hr>
+			</div>
+
+			<div class="form-group">
+				<input class="btn btn-primary" type="submit" value="{{title}}"  [disabled]="!userEditForm.form.valid"/>
+			</div>
+			
+
+			<div class="alert alert-success" *ngIf="status == 'success'">
+					Has actualizado tus datos correctamente
+				</div>
+				
+				<div class="alert alert-danger" *ngIf="status == 'err'">
+					No se a podido actualizar tus datos, puede que ya esten ingresados, <strong>Intentalo nuevamente.</strong>
+				</div>
+		</form>
+		
+		
+	</div>
+</div>

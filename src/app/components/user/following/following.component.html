@@ -1,0 +1,36 @@
+<div class="col-md-6 col-md-offset-2">
+	<div class="people" *ngIf="following">
+		<!--LISTADO-->
+		<h3 class="font-weight-normal">Tu Coach es</h3>
+		<div *ngFor="let follow of following" class="item-user">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<div class="image-user pull-left">
+						<a href="#">
+							<img class="avatar rounded-circle" src="{{ url +'get-image-user/' + follow.followed.image }}" *ngIf="follow.followed.image"/>
+							<img class="avatar rounded-circle" src="assets/images/user.png"  *ngIf="!follow.followed.image"/>
+						</a>	
+					</div>
+
+					<div class="user-name pull-left">
+						<p class="name-surname">
+							<a [routerLink]="['/perfil',follow.followed._id]">
+							&nbsp; {{follow.followed.name + ' ' + follow.followed.lastname}}
+							</a>
+						</p>
+				<p> &nbsp; {{ follow.followed.rut }}</p>
+					</div>
+				</div>
+			
+			</div>
+
+		</div>
+
+		<!--PAGINACION-->
+		<ul class="pagination pull-right">
+			<li *ngIf="page > 1"><a [routerLink]="['/siguiendo', userPageId, prev_page]">Anterior</a></li>
+			<li *ngIf="pages != page"><a [routerLink]="['/siguiendo', userPageId, next_page]">Siguiente</a></li>
+		</ul>
+	</div>
+</div>
+

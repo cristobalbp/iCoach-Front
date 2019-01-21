@@ -1,0 +1,82 @@
+<div class="container" *ngIf="test3" #content>
+    <!-- Test 1 inicial-->
+    <div>
+      <h1 class="font-weight-bold">Resultados y puntajes del test de personalidad</h1>
+      <h6 *ngIf="identity">Participante: {{identity.name + ' ' + identity.lastname }}</h6>
+      <h6 *ngIf="identity">Institución: {{identity.institution}} </h6>
+      <label>
+          <h2>Reformador: {{ test3.reformador }}</h2>
+          idealista, de sólidos principios. Ético y concienzudo, posee un fuerte sentido del bien y del mal. Le llama la difusión, la divulgación y hasta el adoctrinamiento, a veces con una misión o cruzada. Se esfuerza siempre por mejorar las cosas y teme cometer errores. Bien organizado, ordenado y meticuloso, trata de mantener valores elevados, pero puede resultar excesivamente crítico y perfeccionista.      </label>
+    
+      <label>
+          <h2>Ayudador: {{test3.ayudador}}</h2>
+          Es una persona orientada a las demás, comprensiva, sincera, bondadosa, amistosa, generosa y hasta abnegada, pero también puede ser excesivamente preocupada, sentimental y aduladora. Desea intimar con otras personas y suele hacer cosas por los demás para sentirse necesitado.  
+      </label>
+      
+      <label>
+          <h2>Triunfador: {{test3.triunfador}}</h2>
+          Adaptable y orientado al éxito. Seguros de sí mismos, atractivos y encantadores. Ambiciosos, competentes y energéticos; conscientes del status y buscan avance personal. Preocupados de la imagen y lo que los demás piensen de ellos. Problemas con competitividad y trabajólicos. En su mejor estado: Auténticos, se aceptan y son todo lo que parecen ser. Modelos que inspiran a otros.
+       </label>
+      <label>
+          <h2>Artista: {{test3.artista}}</h2>
+          La motivación que los mueve es el deseo o necesidad de realizarse como persona a través de vivir intensas emociones.
+
+Se le llama “El artista o el Especial” porque busca la perfección, hacer las cosas bien y cambiar aquello que ve que está mal (según sus criterios subjetivos, claro está).
+
+Y es esta motivación por ser bueno, ser correcto y tener razón (las 3 cosas son lo mismo) son la base de todos sus hábitos, estrategias de conducta y formas de pensar.
+      </label>
+    
+      <label>
+          <h2>Pensador: {{test3.pensador}}</h2>
+          tienes esta personalidad si eres de aquellas personas que les encanta leer, estudiar y aprender. Siempre te encuentras tratando de resolver un problema. Eres muy lógico y racional.
+          Tiendes a racionalizar tus sentimientos y no guiarte por tu intuición. Esto puede perjudicar tus relaciones personales, si dejas espacio al azar, te convertirás en una persona muy sabia.
+      </label>
+      
+      <label>
+          <h2>Leal: {{test3.leal}} </h2>
+          El tipo comprometido, orientado a la seguridad. Persona digna de confianza, trabajadora y responsable, pero también puede adoptar una actitud defensiva, ser evasiva y muy nerviosa. Trabaja hasta estresarse, al tiempo que se queja de ello. Suele ser cautelosa e indecisa, pero también reactiva, desafiante y rebelde.      </label>
+      <label>
+          <h2>Entusiasta: {{test3.entusiasta}} </h2>
+          tienes esta personalidad si te encuentras en permanente movimiento. Estás dotado con una gran energía que parece nunca acabar. Te gusta ser productivo y no puedes estar sin hacer nada.
+Eres demasiado impulsivo, si te tomas el tiempo para reflexionar, los resultados que obtendrás en tus proyectos, serán mejores.
+      </label>
+    
+      <label>
+          <h2>Protector: {{ test3.protector }}</h2>
+          tienes esta personalidad si sueles ser el líder o coordinador natural de los equipos. Tienes gran capacidad para gestionar grandes emprendimientos. Eres muy seguro de ti mismo.
+          Sueles tener problemas para delegar tareas y confiar en los demás. Recuerda que los mejores trabajos son los que se hacen grupalmente.
+          
+      </label>
+      
+      <label>
+          <h2>Pacifico: {{  test3.pacifico}}</h2>
+          El tipo acomodadizo. Persona conformista, confiada y estable. Es afable y bondadosa, pero también puede estar demasiado dispuesta a transigir con los demás para mantener la paz. Desea que todo vaya sobre ruedas, sin conflictos, pero tiende a minimizar problemas.      </label>
+      <br>
+      <hr>
+        <div>
+        <label >
+            Test realizado a la fecha: &nbsp;{{ (test3.created_at | amFromUnix) | amDateFormat:'MM/DD/YYYY ' }}
+        </label>
+      
+         <div  *ngIf="barChartData" >
+           <canvas baseChart
+                   [datasets]="barChartData"
+                   [labels]="barChartLabels"
+                   [options]="barChartOptions"
+                   [legend]="barChartLegend"
+                   [chartType]="barChartType"></canvas>
+         </div>
+         <label>Dependiendo del mayor valor es el que predomina tu personalidad, consulta a tu Coach para una orientación mas exacta</label>
+       </div>
+    </div>
+  </div>
+  <div class="container">
+    <h3>Descargar como PDF </h3>
+    <!-- Boton para descargar pdf -->
+     <button class="btn btn-secondary" type="button" (click)="downloadPDF()">Descargar a PDF</button>
+</div>
+<div class="container">
+  <h3>La ruta de tu Test esta precargada para que se la envies a tu Coach. </h3>
+  <add></add>
+</div>
+  

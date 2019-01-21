@@ -1,0 +1,243 @@
+<div class="container"> 
+
+<div class="col-xs-12 ">
+  <h1 class="titulo">Como evaluar tu crecimiento actual en Liderazgo.</h1>
+
+  <p class="enunciado">Se evaluará tu liderazgo en general llevando en cuenta los cuatro reinos del Liderazgo que
+    debes ir conquistando paso a paso. Responde las próximas diez preguntas, sin tener que analizar en demasía,
+    marcando únicamente las afirmaciones que son verdaderas para ti. Es importante que hagas el ejercicio sin
+    detenerte mucho en cada frase pues lo importante es la respuesta que surge inmediatamente luego de leer la frase. A
+    veces tenemos la tendencia de responder aquello que nos gustaría ser y no como realmente somos en este momento.
+    Por lo tanto, responde basado en tu primer pensamiento.</p>
+</div>
+
+<table table table-responsive>
+  <div>
+    <form class="form-group container" (ngSubmit)="guardar(forma)" #forma="ngForm">
+      <!-- hiena -->
+      <br>
+      <div class="custom-control custom-radio ">
+        <input type="radio" name="radio0" [(ngModel)]="answers['0']" [value]="1">
+        <label> No necesito recordarle a la gente que trabaja para mi de que yo soy el líder.</label>
+
+      </div>
+      <hr>
+      <div class="control-label ">
+        <input type="radio" name="radio1" [(ngModel)]="answers['1']" [value]="1">
+        <label> Pienso en las personas que trabajan para mi como individuos, como personas, y no simplemente en función de su rol y función en el trabajo.</label>
+
+      </div>
+      <hr>
+      <div class="control-label ">
+        <input type="radio" name="radio2" [(ngModel)]="answers['2']" [value]="1">
+        <label> Normalmente me gusta ir al trabajo y me siento entusiasmado y contento.</label>
+      </div>
+      <hr>
+      <div class="control-label ">
+        <input type="radio" name="radio3" [(ngModel)]="answers['3']" [value]="1">
+        <label> Reconozco que la posición que tengo es una oportunidad de crecer y no algo que debo defender como una posesión personal.</label>
+      </div>
+      <hr>
+      <div class="control-label ">
+        <input type="radio" name="radio4" [(ngModel)]="answers['4']" [value]="1">
+        <label> Las personas que trabajan para mi están dispuestas a realizar tareas y trabajos que van más allá de su descripción de trabajo.</label>
+      </div>
+      <hr>
+      <div class="control-label ">
+        <input type="radio" name="radio5" [(ngModel)]="answers['5']" [value]="1">
+        <label> Reconozco que lidiar con las personas y sus problemas es parte del liderazgo y lo acepto como parte de mi trabajo.</label>
+      </div>
+      <hr>
+      <div class="control-label ">
+        <input type="radio" name="radio6" [(ngModel)]="answers['6']" [value]="1">
+        <label> Tengo el deseo de aprender más sobre liderazgo y ser mejor líder.
+        </label>
+      </div>
+      <hr>
+      <div class="control-label ">
+        <input type="radio" name="radio7" [(ngModel)]="answers['7']" [value]="1">
+        <label> Pienso en mi trabajo como tareas y objetivos que se deben realizar y no tanto como una carrera que debo perseguir o posiciones que debo lograr.</label>
+      </div>
+      <hr>
+      <div class="control-label ">
+        <input type="radio" name="radio8" [(ngModel)]="answers['8']" [value]="1">
+        <label> Uno de mis objetivos más importantes es servir a la gente que trabaja para mi. Cuando hablo de logros no uso el “yo” o el “mío”.</label>
+      </div>
+      <hr>
+      <div class="control-label ">
+        <input type="radio" name="radio9" [(ngModel)]="answers['9']" [value]="1">
+        <label> La mayor parte de las personas cree que trabajar conmigo es fácil y agradable.</label>
+      </div>
+      <hr>
+      <!-- perro -->
+      <div class="control-label ">
+        <input type="radio" name="radio10" [(ngModel)]="answers['10']" [value]="2">
+        <label> Personas que trabajan en otros departamentos de mi organización o en otra área de responsabilidad respetan mis opiniones y frecuentemente buscan mis consejos.</label>
+      </div>
+      <hr>
+      <div class="control-label ">
+        <input type="radio" name="radio11" [(ngModel)]="answers['11']" [value]="2">
+        <label> Conozco mis fortalezas y mis debilidades. Raramente dejo de ser consciente de estas.</label>
+      </div>
+      <hr>
+      <div class="control-label ">
+        <input type="radio" name="radio12" [(ngModel)]="answers['12']" [value]="2">
+        <label> Me gusta la gente y soy genuino en querer ayudarlas.</label>
+      </div>
+      <hr>
+      <div class="control-label ">
+        <input type="radio" name="radio13" [(ngModel)]="answers['13']" [value]="2">
+        <label> Poseo y demuestro un temperamento consistente y sin variaciones cuando me relaciono con las personas que trabajan para mi. Mi humor no es variable sino que estable y temperado.</label>
+      </div>
+      <hr>
+      <div class="control-label ">
+        <input type="radio" name="radio14" [(ngModel)]="answers['14']" [value]="2">
+        <label> Cuando digo algo mi equipo siempre confía que lo haré pues soy confiable y siempre cumplo lo que digo.</label>
+      </div>
+      <hr>
+      <div class="control-label ">
+        <input type="radio" name="radio15" [(ngModel)]="answers['15']" [value]="2">
+        <label> He desarrollado solidas relaciones con la gente que trabaja conmigo.</label>
+      </div>
+      <hr>
+      <div class="control-label ">
+        <input type="radio" name="radio16" [(ngModel)]="answers['16']" [value]="2">
+        <label> Las personas que trabajan conmigo me consideran agradable y afable en casi 100% de las veces.</label>
+      </div>
+      <hr>
+      <div class="control-label ">
+        <input type="radio" name="radio17" [(ngModel)]="answers['17']" [value]="2">
+        <label> Cuando necesito tener una conversación directa y difícil con alguien de mi equipo para corregi errores o resolver problemas, lo hago y no dejo que pase mucho tiempo.</label>
+      </div>
+      <hr>
+      <div class="control-label ">
+        <input type="radio" name="radio18" [(ngModel)]="answers['18']" [value]="2">
+        <label> Creo que las personas realmente desean más que simplemente un buen sueldo. La mayoría desea apoyo y yo se los doy.</label>
+      </div>
+      <hr>
+      <div class="control-label ">
+        <input type="radio" name="radio19" [(ngModel)]="answers['19']" [value]="2">
+        <label> He desarrollado relaciones positivas con todas las personas que trabajan para mi.</label>
+      </div>
+      <hr>
+      <!-- Bufalo -->
+      <div class="control-label ">
+        <input type="radio" name="radio20" [(ngModel)]="answers['20']" [value]="3">
+        <label> Consistentemente alcanzo mis objetivos y metas en el trabajo.</label>
+      </div>
+      <hr>
+      <div class="control-label ">
+        <input type="radio" name="radio21" [(ngModel)]="answers['21']" [value]="3">
+        <label> Personas competentes y buenas están siempre con deseos de trabajar conmigo y en mi equipo.</label>
+      </div>
+      <hr>
+      <div class="control-label ">
+        <input type="radio" name="radio22" [(ngModel)]="answers['22']" [value]="3">
+        <label> Las personas me ven como un experto en lo que hago y buscan mis consejos y opiniones para aprender de mi.</label>
+      </div>
+      <hr>
+      <div class="control-label ">
+        <input type="radio" name="radio23" [(ngModel)]="answers['23']" [value]="3">
+        <label> Estoy constantemente marcando y alcanzando metas que me propongo a mi mismo, inclusive cuando mis superiores no me solicitan.</label>
+      </div>
+      <hr>
+      <div class="control-label ">
+        <input type="radio" name="radio24" [(ngModel)]="answers['24']" [value]="3">
+        <label> Mi desempeño y ejemplo en el trabajo a menudo estimula a mi equipo a alcanzar nuevos y más altos standards.</label>
+      </div>
+      <hr>
+      <div class="control-label ">
+        <input type="radio" name="radio25" [(ngModel)]="answers['25']" [value]="3">
+        <label> Doy siempre lo mejor de mi mismo y sin embargo uso siempre el “nosotros” de forma genuina cuando hablo de nuestros éxitos y logros.</label>
+      </div> 
+      <hr>
+      <div class="control-label ">
+        <input type="radio" name="radio26" [(ngModel)]="answers['26']" [value]="3">
+        <label> Estoy cómodo con la idea de que otros estén mirando mi desempeño y siguiendo mi ejemplo.</label>
+      </div>
+      <hr>
+      <div class="control-label ">
+        <input type="radio" name="radio27" [(ngModel)]="answers['27']" [value]="3">
+        <label> Me siento estimulado y contento cuando pienso en mi trabajo y también mi gente se siente entusiasmada y contenta de hacer parte de mi equipo.</label>
+      </div>
+      <hr>
+      <div class="control-label ">
+        <input type="radio" name="radio28" [(ngModel)]="answers['28']" [value]="3">
+        <label> Mi desempeño en el trabajo es consistente a lo largo del tiempo. </label>
+      </div>
+      <hr>
+      <div class="control-label ">
+        <input type="radio" name="radio29" [(ngModel)]="answers['29']" [value]="3">
+        <label> Poseo sistemas y rutinas que me ayudan a desempeñarme a un alto nivel.</label>
+      </div>
+      <hr>
+      <!--Leon-->
+      <div class="control-label ">
+        <input type="radio" name="radio30" [(ngModel)]="answers['30']" [value]="4">
+        <label> Organizo y implemento entrenamientos y desarrollo para todos los miembros de mi equipo de forma regular y consistente.
+        </label>
+      </div>
+      <hr>
+      <div class="control-label ">
+        <input type="radio" name="radio31" [(ngModel)]="answers['31']" [value]="4">
+        <label> Cuando tenemos plazos que cumplir y el trabajo se vuelve urgente nunca cancelamos nuestros entrenamientos y desarrollo.
+        </label>
+      </div>
+      <hr>
+      <div class="control-label ">
+        <input type="radio" name="radio32" [(ngModel)]="answers['32']" [value]="4">
+        <label> Asumo riesgos por medio a dar a las personas responsabilidades y autoridad que les hará crecer y
+          les forzará de a poco hacia su desarrollo.</label>
+      </div>
+      <hr>
+      <div class="control-label ">
+        <input type="radio" name="radio33" [(ngModel)]="answers['33']" [value]="4">
+        <label> Invierto un tiempo significativo dando mentorado a otros líderes que están creciendo en mi
+          organización.</label>
+      </div>
+      <hr>
+      <div class="control-label ">
+        <input type="radio" name="radio34" [(ngModel)]="answers['34']" [value]="4">
+        <label>
+          Conozco perfectamente las fortalezas y debilidades de todos en mi equipo.</label>
+      </div>
+      <hr>
+      <div class="control-label ">
+        <input type="radio" name="radio35" [(ngModel)]="answers['35']" [value]="4">
+        <label> Entreno, doy mentorado y desarrollo a mi gente adaptado a sus características individuales.</label>
+      </div>
+      <hr>
+      <div class="control-label ">
+        <input type="radio" name="radio36" [(ngModel)]="answers['36']" [value]="4">
+        <label> Invierto mi tiempo más estratégico y significativo dando mentorado a las personas que tienen
+          mayor capacidad y talento en mi organización.
+        </label>
+      </div>
+      <hr>
+      <div class="control-label ">
+        <input type="radio" name="radio37" [(ngModel)]="answers['37']" [value]="4">
+        <label> Siento un genuino interés en que mi gente tenga éxito en la vida, no solamente en el trabajo.
+          Puedo decir que me sacrifico por los otros con convicción de que es mi
+          llamado en la vida.</label>
+      </div>
+      <hr>
+      <div class="control-label ">
+        <input type="radio" name="radio38" [(ngModel)]="answers['38']" [value]="4">
+        <label> Hablo siempre en término de “nosotros” y me enfoco en “los otros” y no uso el “yo” o el “mío” a
+          no ser que sea para responsabilizarme por los errores.</label>
+      </div>
+      <hr>
+      <div class="control-label ">
+        <input type="radio" name="radio39" [(ngModel)]="answers['39']" [value]="4">
+        <label> Mi equipo o departamento es considerado por otros como uno de los mejores entrenados de la
+          organización.</label>
+      </div>
+
+      <br>
+      <button class="btn btn-primary " type="submit">
+        Guardar
+      </button>
+    </form>
+  </div>
+</table>
+</div>

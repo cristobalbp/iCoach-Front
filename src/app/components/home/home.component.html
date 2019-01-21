@@ -1,0 +1,63 @@
+  <!-- Aqui vendran las features cuando el usuario no este logeado, cuando este logeado abrira otra ventana -->
+
+<div class="features-boxed" *ngIf="!identity">
+    <div class="container">
+        <div class="intro">
+            <h2 class="text-center name font-weight-light">Características</h2>
+            <br>
+            <h3 class="name subtitulo font-weight-light">Sistema de evaluación preliminar <strong>UNICO</strong> </h3>
+            <p class="name subtitulo description ">iCoach integra la nueva teoria de evaluación EAPyC, la que te permitirá evaluar el estado en el cual tus coachees se encuentran antes de iniciar tus terapias, así podrás realizarlas de manera más efectiva, ahorrando tiempo y siendi más efectivo.</p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+        <div class="row justify-content-center features">
+            <div class="col-sm-6 col-md-5 col-lg-4 item">
+                <div class="box">
+                    <h3 class="name font-weight-light">Consigue mas clientes</h3>
+                    <p class="description">
+                            iCoach te ayuda a gestionar más clientes con menos trabajo logístico.
+                        </p></div>
+            </div>
+            <div class="col-sm-6 col-md-5 col-lg-4 item">
+                <div class="box">
+                    <h3 class="name font-weight-light">Ahorra tiempo</h3>
+                    <p class="description">
+                            iCoach te ayuda a ahorra tiempo en tu labor como coach gracias a las herramientas logísticas que te proporciona y por organizar toda la información de tus clientes en un solo lugar.                    </p></div>
+            </div>
+            <div class="col-sm-6 col-md-5 col-lg-4 item">
+                <div class="box">
+
+                    <h3 class="name font-weight-light">Mantente organizado </h3>
+                    <p class="description">iCoach te proporciona un sistema integrado para gestionar todos los aspectos relacionados con tu sesiones de coaching
+                        </p></div>
+            </div>
+           
+            <div class="col-sm-6 col-md-5 col-lg-4 item">
+                <div class="box">
+                    <h3 class="name font-weight-light">Informacion instantanea </h3>
+                    <p class="description">iCoach te proporciona toda la información que necesitas al alcance de un click </p></div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<!-- Dashboard Coach -->
+<div *ngIf="identity" >
+    <div *ngIf="identity.role_coach">
+      <app-timeline></app-timeline>
+</div>
+
+    <!-- Dashboard Coachee -->
+    <div *ngIf="identity.role_coachee">
+                <app-timeline></app-timeline>
+    </div> 
+</div>
+    
+
+     
+
+
+

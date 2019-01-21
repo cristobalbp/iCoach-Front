@@ -1,0 +1,17 @@
+<div class="container"> 
+<app-task (submit)="refresh($event)"></app-task>
+<!-- Listar tareas -->
+</div>
+<div class="container"> 
+<div class="list-group" *ngFor="let task of task">
+  <a  class="list-group-item list-group-item-action flex-column align-items-start ">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1"></h5>
+      <small>{{ (task.created_at | amFromUnix) | amDateFormat:'MM/DD/YYYY '}}</small>
+    </div>
+    <p class="mb-1">{{task.text}}</p>
+    <small><button type="button" class="btn btn-danger pull-right" (click)="deleteTask(task._id)"><i class="fas fa-trash-alt"></i>
+		</button></small>
+  </a>
+</div>
+</div>

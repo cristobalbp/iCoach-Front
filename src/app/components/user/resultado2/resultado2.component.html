@@ -1,0 +1,52 @@
+<div class="container" #content *ngIf="test2">
+    <!-- Test 1 inicial-->
+    <div class="container">
+      <h1 class="font-weight-bold">Resultados y interpretación del test de liderazgo</h1>
+      <h6 *ngIf="identity">Participante: {{identity.name + ' ' + identity.lastname }}</h6>
+      <h6 *ngIf="identity">Institución: {{identity.institution}} </h6>
+      <label>
+          La explicación deberá ser solicitada a tu coach profesional, dependiendo del tipo de respuestas y 
+          numero de veces que te salio cierto animal, dependerá de tu estilo de liderazgo y a que 
+          reino perteneces o domina.     
+      </label>
+      <br>
+      <hr>
+        <div>
+        <label >
+          Test realizado a la fecha: &nbsp;{{ (test2.created_at | amFromUnix) | amDateFormat:'MM/DD/YYYY ' }}
+        </label>
+      
+         <div  *ngIf="barChartData" >
+           <canvas baseChart
+                   [datasets]="barChartData"
+                   [labels]="barChartLabels"
+                   [options]="barChartOptions"
+                   [legend]="barChartLegend"
+                   [chartType]="barChartType"></canvas>
+         </div>
+
+
+         <label>Este test ayudara a tu Coach a ver de manera mas rapida los resultados de los test, preguntale para obtener mas información</label>
+
+       </div>
+      
+       <label>  <h5 style="color:#007bff; font: bold">Resultados</h5>
+        <p>  [Hiena: {{ test2.hiena}}]  [Perro: {{test2.perro}}] [Bufalo: {{test2.bufalo}}] [Leon: {{test2.leon}}]
+          </p>  
+        </label>
+       
+    </div>
+    
+  </div>
+  <div class="container">
+    <h3>Descargar como PDF </h3>
+    <!-- Boton para descargar pdf -->
+     <button class="btn btn-secondary" type="button" (click)="downloadPDF()">Descargar a PDF</button>
+</div>
+<div class="container">
+  <h3>La ruta de tu Test esta precargada para que se la envies a tu Coach. </h3>
+  <add></add>
+</div>
+  
+  
+  

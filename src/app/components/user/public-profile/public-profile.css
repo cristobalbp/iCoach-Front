@@ -1,0 +1,16 @@
+.avatar{
+    width: 400px;
+    height: 380px;
+    border-radius: 5%;
+    margin-left: 50%;
+}
+
+.abs-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .info{
+      margin-top: -35%;
+  }

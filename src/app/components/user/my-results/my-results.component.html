@@ -1,0 +1,37 @@
+
+<div class="col-lg-8">
+	<h2 class="h2-strong font-weight-normal">Resultados de tus test de estílos de aprendizaje</h2>
+	<div id="test1">
+		<div *ngFor="let test1 of test1" >
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<h4 class="font-weight-normal">{{ test1.user.name + ' ' + test1.user.lastname}}: Tus resultados de estílos de aprendizaje</h4>
+					<a [routerLink]="['/resultado1/',test1._id]" class="btn btn-primary ">Ver mis resultados </a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div>
+		<h2 class="h2-strong font-weight-normal">Tus resultados del test de liderazgo</h2>
+		<div *ngFor="let test2 of test2">
+				<div class="panel panel-default">
+						<div class="panel-body">
+							<h4 class="font-weight-normal">{{ test2.user.name + ' ' + test2.user.lastname}}: Tus resultados del test de liderazgo</h4>
+							<a [routerLink]="['/resultado2/',test2._id]" class="btn btn-secondary ">Ver mis resultados </a>
+						</div>
+					</div>
+		</div>
+	</div>
+
+	<div>
+			<h2 class="h2-strong font-weight-normal">Tus resultados del test de personalidad</h2>
+			<div *ngFor="let test3 of test3">
+					<div class="panel panel-default">
+							<div class="panel-body">
+								<h4 class="font-weight-normal">{{ test3.user.name + ' ' + test3.user.lastname}}: Tus resultados del test de personalidad</h4>
+								<a [routerLink]="['/resultado3/',test3._id]" class="btn btn-success ">Ver mis resultados </a>
+							</div>
+						</div>
+			</div>
+		</div>
+</div>

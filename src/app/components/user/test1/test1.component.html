@@ -1,0 +1,380 @@
+<!--Formulario 1 -->
+<div class="col-xs-12 abs-center"> 
+<form class="form-group" (ngSubmit)="guardar(forma)" #forma="ngForm" > 
+    <h1 class="titulo"><strong> Test </strong>  Estilos de aprendizaje</h1>
+      <div >
+        <label>¿Cual de las siguientes actividades disfruta más? </label>
+        <select class="form-control" [(ngModel)]="answers['0']" name="inputName" required>
+          <option [ngValue]="">  </option>
+          <option [ngValue]="2"> Escuchar música </option>
+          <option [ngValue]="1"> Ver peliculas </option>
+          <option [ngValue]="3"> Bailar con buena musica </option>
+        </select>
+      </div>
+      <div >
+        <label>¿Que programación de televisión prefieres? </label>
+        <select class="form-control" [(ngModel)]="answers['1']" name="inputName" required>
+          <option [ngValue]="">  </option>
+          <option [ngValue]="1"> Reportajes de descubrimiento y lugares </option>
+          <option [ngValue]="3"> Cómico y entretenimiento </option>
+          <option [ngValue]="2"> Noticias del mundo </option>
+        </select>
+      </div>
+      <div >
+        <label>Cuando conversar con otra persona, tú: </label>
+        <select class="form-control" [(ngModel)]="answers['2']" name="inputName" required>
+          <option [ngValue]="">  </option>
+          <option [ngValue]="2"> La escuchas atentamente </option>
+          <option [ngValue]="1"> La observas </option>
+          <option [ngValue]="3"> Tiendes a tocarla </option>
+        </select>
+      </div>
+      <div >
+        <label>¿Si pudieras adquirir uno de los siguientes articulos, ¿Cual elegirías?. </label>
+        <select class="form-control" [(ngModel)]="answers['3']" name="inputName" required>
+          <option [ngValue]="">  </option>
+          <option [ngValue]="3"> Un jacuzzi </option>
+          <option [ngValue]="2"> Un stereo </option>
+          <option [ngValue]="1"> Un Televisor </option>
+        </select>
+      </div>
+     
+      <div >
+        <label>¿Que prefieres hacer un sabado por la tarde? </label>
+        <select class="form-control" [(ngModel)]="answers['4']" name="inputName" required>
+          <option [ngValue]="">  </option>
+          <option [ngValue]="3"> Quedarte en casa   </option>
+          <option [ngValue]="2"> Ir a un concierto </option>
+          <option [ngValue]="1"> Ir al cine </option>
+        </select>
+      </div>
+      <div>
+ <label>¿Que tipo de exámenes se te facilitan más? </label>
+        <select class="form-control" [(ngModel)]="answers['5']" name="inputName" required>
+          <option [ngValue]="">  </option>
+          <option [ngValue]="2"> Examen oral </option>
+          <option [ngValue]="1"> Examen escrito </option>
+          <option [ngValue]="3"> Examen de opción multiple </option>
+        </select>
+      </div>
+      <div >
+        <label>¿Como te orientas mas facílmente? </label>
+        <select class="form-control" [(ngModel)]="answers['6']" name="inputName" required>
+          <option [ngValue]="">  </option>
+          <option [ngValue]="1"> Mediante el uso de un mapa </option>
+          <option [ngValue]="2"> Pidiendo indicaciones </option>
+          <option [ngValue]="3"> A travéz de la intuición </option>
+        </select>
+      </div>
+      <div >
+        <label>¿En que prefieres ocupar tu tiempo en lugar de descanso? </label>
+        <select class="form-control" [(ngModel)]="answers['7']" name="inputName" required>
+          <option [ngValue]="">  </option>
+          <option [ngValue]="2"> Pensar </option>
+          <option [ngValue]="1"> Caminar a los alrededores </option>
+          <option [ngValue]="3"> Descansar </option>
+        </select>
+      </div>
+      <div>
+        <label>¿Que te halaga más? </label>
+        <select class="form-control" [(ngModel)]="answers['8']" name="inputName" required>
+          <option [ngValue]="">  </option>
+          <option [ngValue]="1"> Que te digan que tienes un buen aspecto </option>
+          <option [ngValue]="2"> Que te digan que tienes un trato muy agradable </option>
+          <option [ngValue]="3"> Que te digan que tienes una conversación interesante </option>
+        </select>
+      </div>
+      <div >
+        <label>¿Cual de estos ambientes te atrae más? </label>
+        <select class="form-control" [(ngModel)]="answers['9']" name="inputName" required>
+          <option [ngValue]="">  </option>
+          <option [ngValue]="3"> Uno en el que se sienta un clima agradable </option>
+          <option [ngValue]="1"> Uno en el que se escuche las olas del mar </option>
+          <option [ngValue]="2"> Uno con una hermosa vista al oceano </option>
+        </select>
+      </div>
+      <div >
+          <label>¿De qué manera se te facilita aprender algo? </label>
+          <select class="form-control" [(ngModel)]="answers['10']" name="inputName" required>
+            <option [ngValue]="">  </option>
+            <option [ngValue]="2"> Repitiendo en voz alta </option>
+            <option [ngValue]="1"> Escribiéndolo varias veces </option>
+            <option [ngValue]="3"> Relacionándolo con algo divertido </option>
+          </select>
+      </div>
+      <div >
+          <label>¿A qué evento preferirías asistir? </label>
+          <select class="form-control" [(ngModel)]="answers['11']" name="inputName" required>
+            <option [ngValue]="">  </option>
+            <option [ngValue]="2"> A una reunión social </option>
+            <option [ngValue]="3"> A una exposición de arte </option>
+            <option [ngValue]="1"> A una conferencia</option>
+          </select>
+      </div>
+      <div >
+          <label> ¿De qué manera te formas una opinión de otras personas? </label>
+          <select class="form-control" [(ngModel)]="answers['12']" name="inputName" required>
+            <option [ngValue]="">  </option>
+            <option [ngValue]="3"> Por la sinceridad en su voz </option>
+            <option [ngValue]="1"> Por la forma de estrecharte la mano </option>
+            <option [ngValue]="2">  Por su aspecto</option>
+          </select>
+      </div>
+      <div >
+          <label>  ¿Cómo te consideras? </label>
+          <select class="form-control" [(ngModel)]="answers['13']" name="inputName" required>
+            <option [ngValue]="">  </option>
+            <option [ngValue]="3"> Atlético </option>
+            <option [ngValue]="2"> Intelectual</option>
+            <option [ngValue]="1">  Sociable</option>
+          </select>
+      </div>
+      <div >
+          <label>   ¿Qué tipo de películas te gustan más? </label>
+          <select class="form-control" [(ngModel)]="answers['14']" name="inputName" required>
+            <option [ngValue]="">  </option>
+            <option [ngValue]="2"> Clásicas </option>
+            <option [ngValue]="1"> De acción</option>
+            <option [ngValue]="3">  De amor</option>
+          </select>
+      </div>
+      <div >
+          <label> ¿Cómo prefieres mantenerte en contacto con otra persona? </label>
+          <select class="form-control" [(ngModel)]="answers['15']" name="inputName" required>
+            <option [ngValue]="">  </option>
+            <option [ngValue]="1"> por correo electrónico </option>
+            <option [ngValue]="3"> Tomando un café juntos</option>
+            <option [ngValue]="2"> Por teléfono</option>
+          </select>
+      </div>
+      <div >
+          <label>  ¿Cuál de las siguientes frases se identifican más contigo? </label>
+          <select class="form-control" [(ngModel)]="answers['16']" name="inputName" required>
+            <option [ngValue]="">  </option>
+            <option [ngValue]="3"> Me gusta que mi coche se sienta bien al conducirlo </option>
+            <option [ngValue]="2"> Percibo hasta el mas ligero ruido que hace mi coche</option>
+            <option [ngValue]="1"> Es importante que mi coche esté limpio por fuera y por dentro</option>
+          </select>
+      </div>
+      <div >
+          <label> ¿Cómo prefieres pasar el tiempo con tu novia o novio? </label>
+          <select class="form-control" [(ngModel)]="answers['17']" name="inputName" required>
+            <option [ngValue]="">  </option>
+            <option [ngValue]="3"> Conversando </option>
+            <option [ngValue]="1"> Acariciándose</option>
+            <option [ngValue]="2">  Mirando algo juntos</option>
+          </select>
+      </div>
+      <div >
+          <label> Si no encuentras las llaves en una bolsa </label>
+          <select class="form-control" [(ngModel)]="answers['18']" name="inputName" required>
+            <option [ngValue]="">  </option>
+            <option [ngValue]="1">  La buscas mirando </option>
+            <option [ngValue]="2">  Sacudes la bolsa para oír el ruido</option>
+            <option [ngValue]="3">  Buscas al tacto</option>
+          </select>
+      </div>
+      <div >
+          <label> Cuando tratas de recordar algo, ¿cómo lo haces? </label>
+          <select class="form-control" [(ngModel)]="answers['19']" name="inputName" required>
+            <option [ngValue]="">  </option>
+            <option [ngValue]="1">  A través de imágenes </option>
+            <option [ngValue]="3">  A través de emociones</option>
+            <option [ngValue]="2">  A través de sonidos</option>
+          </select>
+      </div>
+      <div >
+          <label> Si tuvieras dinero, ¿qué harías? </label>
+          <select class="form-control" [(ngModel)]="answers['20']" name="inputName" required>
+            <option [ngValue]="">  </option>
+            <option [ngValue]="2">  Comprar una casa </option>
+            <option [ngValue]="3">  Viajar y conocer el mundo</option>
+            <option [ngValue]="1">  Adquirir un estudio de grabación</option>
+          </select>
+      </div>
+      <div >
+          <label> ¿Con qué frase te identificas más? </label>
+          <select class="form-control" [(ngModel)]="answers['21']" name="inputName" required>
+            <option [ngValue]="">  </option>
+            <option [ngValue]="3">   Reconozco a las personas por su voz </option>
+            <option [ngValue]="1">   No recuerdo el aspecto de la gente</option>
+            <option [ngValue]="2">  Recuerdo el aspecto de alguien, pero no su nombre</option>
+          </select>
+      </div>
+      <div >
+          <label>  Si tuvieras que quedarte en una isla desierta, ¿qué preferirías llevar contigo? </label>
+          <select class="form-control" [(ngModel)]="answers['22']" name="inputName" required>
+            <option [ngValue]="">  </option>
+            <option [ngValue]="1">  Algunos buenos libros </option>
+            <option [ngValue]="3">  Un radio portátil de alta frecuencia</option>
+            <option [ngValue]="1">  Golosinas y comida enlatadae</option>
+          </select>
+      </div>
+      <div >
+          <label>   ¿Cuál de los siguientes entretenimientos prefieres? </label>
+          <select class="form-control" [(ngModel)]="answers['23']" name="inputName" required>
+            <option [ngValue]="">  </option>
+            <option [ngValue]="2">  Tocar un instrumento musical </option>
+            <option [ngValue]="1">  Sacar fotografías</option>
+            <option [ngValue]="3">   Actividades manuales </option>
+          </select>
+      </div>
+      <div >
+          <label>   ¿Cómo es tu forma de vestir?</label>
+          <select class="form-control" [(ngModel)]="answers['24']" name="inputName" required>
+            <option [ngValue]="">  </option>
+            <option [ngValue]="1">  Impecable </option>
+            <option [ngValue]="2">  Informal</option>
+            <option [ngValue]="3">  Muy informal </option>
+          </select>
+      </div>
+      <div >
+          <label>   ¿Qué es lo que más te gusta de una fogata nocturna?</label>
+          <select class="form-control" [(ngModel)]="answers['25']" name="inputName" required>
+            <option [ngValue]="">  </option>
+            <option [ngValue]="3">  El calor del fuego y los bombones asados </option>
+            <option [ngValue]="2">  El sonido del fuego quemando la leña</option>
+            <option [ngValue]="1">  Mirar el fuego y las estrellas </option>
+          </select>
+      </div>
+      <div >
+          <label>   ¿Cómo se te facilita entender algo?</label>
+          <select class="form-control" [(ngModel)]="answers['26']" name="inputName" required>
+            <option [ngValue]="">  </option>
+            <option [ngValue]="2">  Cuando te lo explican verbalmente </option>
+            <option [ngValue]="1">  Cuando utilizan medios visuales</option>
+            <option [ngValue]="3">  Cuando se realiza a través de alguna actividad </option>
+          </select>
+      </div>
+      <div >
+          <label>   ¿Por qué te distingues?</label>
+          <select class="form-control" [(ngModel)]="answers['27']" name="inputName" required>
+            <option [ngValue]="">  </option>
+            <option [ngValue]="3">  Por tener una gran intuición </option>
+            <option [ngValue]="2">  Por ser un buen conversador</option>
+            <option [ngValue]="1">  Por ser un buen observador </option>
+          </select>
+      </div>
+      <div >
+          <label>   ¿Qué es lo que más disfrutas de un amanecer? </label>
+          <select class="form-control" [(ngModel)]="answers['28']" name="inputName" required>
+            <option [ngValue]="">  </option>
+            <option [ngValue]="2">  La emoción de vivir un nuevo día </option>
+            <option [ngValue]="3">  Las tonalidades del cielo</option>
+            <option [ngValue]="1">  El canto de las aves </option>
+          </select>
+      </div>
+      <div >
+          <label>   Si pudieras elegir ¿qué preferirías ser? </label>
+          <select class="form-control" [(ngModel)]="answers['29']" name="inputName" required>
+            <option [ngValue]="">  </option>
+            <option [ngValue]="3">  Un gran médico </option>
+            <option [ngValue]="2">  Un gran músico</option>
+            <option [ngValue]="1">  Un gran pintor </option>
+          </select>
+      </div>
+      <div >
+          <label>   Cuando eliges tu ropa, ¿qué es lo más importante para ti? </label>
+          <select class="form-control" [(ngModel)]="answers['30']" name="inputName" required>
+            <option [ngValue]="">  </option>
+            <option [ngValue]="2">  Que sea adecuada </option>
+            <option [ngValue]="1">  Que luzca bien</option>
+            <option [ngValue]="3">  Que sea cómoda </option>
+          </select>
+      </div>
+      <div >
+          <label>    ¿Qué es lo que más disfrutas de una habitación? </label>
+          <select class="form-control" [(ngModel)]="answers['31']" name="inputName" required>
+            <option [ngValue]="">  </option>
+            <option [ngValue]="3">  Que sea silenciosa </option>
+            <option [ngValue]="1">  Que sea confortable</option>
+            <option [ngValue]="2">  Que esté limpia y ordenada </option>
+          </select>
+      </div>
+      <div >
+          <label>    ¿Qué es más sexy para ti? </label>
+          <select class="form-control" [(ngModel)]="answers['32']" name="inputName" required>
+            <option [ngValue]="">  </option>
+            <option [ngValue]="1">  Una iluminación tenue </option>
+            <option [ngValue]="3">  El perfume</option>
+            <option [ngValue]="2">  Cierto tipo de música </option>
+          </select>
+      </div>
+      <div >
+          <label>    ¿A qué tipo de espectáculo preferirías asistir? </label>
+          <select class="form-control" [(ngModel)]="answers['33']" name="inputName" required>
+            <option [ngValue]="">  </option>
+            <option [ngValue]="2">  A un concierto de música </option>
+            <option [ngValue]="1">  A un espectáculo de magia</option>
+            <option [ngValue]="3">  A una muestra gastronómica </option>
+          </select>
+      </div>
+      <div >
+          <label>     ¿Qué te atrae más de una persona? </label>
+          <select class="form-control" [(ngModel)]="answers['34']" name="inputName" required>
+            <option [ngValue]="">  </option>
+            <option [ngValue]="2">  Su trato y forma de ser </option>
+            <option [ngValue]="3">  Su aspecto físico</option>
+            <option [ngValue]="1">  Su conversación </option>
+          </select>
+      </div>
+      <div >
+          <label>     Cuando vas de compras, ¿en dónde pasas mucho tiempo? </label>
+          <select class="form-control" [(ngModel)]="answers['35']" name="inputName" required>
+            <option [ngValue]="">  </option>
+            <option [ngValue]="1">  En una librería</option>
+            <option [ngValue]="3">  En una perfumería</option>
+            <option [ngValue]="2">  En una tienda de discos </option>
+          </select>
+      </div>
+      <div >
+          <label>      ¿Cuáles tu idea de una noche romántica? </label>
+          <select class="form-control" [(ngModel)]="answers['36']" name="inputName" required>
+            <option [ngValue]="">  </option>
+            <option [ngValue]="1">  A la luz de las velas</option>
+            <option [ngValue]="2">  Con música romántica</option>
+            <option [ngValue]="3">  Bailando tranquilamente </option>
+          </select>
+      </div>
+      <div >
+          <label>      ¿Qué es lo que más disfrutas de viajar? </label>
+          <select class="form-control" [(ngModel)]="answers['37']" name="inputName" required>
+            <option [ngValue]="">  </option>
+            <option [ngValue]="2">  Conocer personas y hacer nuevos amigos</option>
+            <option [ngValue]="3">  Conocer lugares nuevos</option>
+            <option [ngValue]="1">  Aprender sobre otras costumbres </option>
+          </select>
+      </div>
+      <div >
+          <label> Cuando estás en la ciudad, ¿qué es lo que más hechas de menos del campo? </label>
+          <select class="form-control" [(ngModel)]="answers['38']" name="inputName" required>
+            <option [ngValue]="">  </option>
+            <option [ngValue]="2">  El aire limpio y refrescante</option>
+            <option [ngValue]="3">  Los paisajes</option>
+            <option [ngValue]="1">  La tranquilidad </option>
+          </select>
+      </div>
+      <div >
+          <label> Si te ofrecieran uno de los siguientes empleos, ¿cuál elegirías? </label>
+          <select class="form-control" [(ngModel)]="answers['39']" name="inputName" required>
+            <option [ngValue]="">  </option>
+            <option [ngValue]="3">  Director de una estación de radio</option>
+            <option [ngValue]="1">  Director de un club deportivo</option>
+            <option [ngValue]="2">  Director de una revista </option>
+          </select>
+      </div>
+      <br>
+      <div>
+        <button class="btn btn-success btn-round" type="submit" [disabled]="!forma.form.valid">
+          Guardar
+        </button>
+        <br>
+        <br>
+        <p>Referencia: De la Parra Paz, Eric, Herencia de vida para tus
+          hijos. Crecimiento integral con técnicas PNL, Ed. Grijalbo,
+          México, 2004, págs. 88-95 1 00 DGB/DCA/12-2004</p></div>
+
+   </form>
+  </div>
+       
+   

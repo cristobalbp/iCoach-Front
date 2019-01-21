@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="card-header">
+    Tarea
+  </div>
+  <div class="card-body">
+  	<form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)"> 
+ 	<h5 class="card-title">Escribe una tarea</h5>
+	<textarea name="text" #text="ngModel" [(ngModel)]="task.text" class="form-control"></textarea>
+	<br>
+    <input type="submit" [disabled]="!registerForm.form.valid"  class="btn btn-success"> 
+  </form>
+  </div>
+</div>
+<div class="  panel-default panel-body"> 
+<div class="alert alert-success" *ngIf="status == 'error'">
+		Tarea enviada correctamente
+</div>
+<div class="alert alert-danger" *ngIf="status == 'success'">
+		Tarea no enviada 
+</div>
+
+</div>

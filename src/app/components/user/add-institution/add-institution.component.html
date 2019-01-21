@@ -1,0 +1,30 @@
+<div class="col-xs-auto abs-center"> 
+<form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)" class="form panel-body">
+  <h2 class="text-center"><strong>Dar permisos</strong> a una institucion.</h2>
+  <h4 class="text-center"> Con estos datos permitiras que el participante se registre </h4>
+  <div class="form-group">
+    <input class="form-control" type="text" name="name" placeholder="Nombre de empresa" #name="ngModel" [(ngModel)]="institution.name"
+      required />
+    <span *ngIf="!name.valid && name.touched"> El ingreso es obligatorio </span>
+  </div>
+  <div class="form-group">
+    <input class="form-control" type="text" name="name" placeholder="Codigo" #code="ngModel" [(ngModel)]="institution.code"
+      required />
+    <span *ngIf="!name.valid && name.touched"> El ingreso es obligatorio </span>
+  </div>
+  <div class="form-group">
+    <input class="form-control" type="password" name="password" placeholder="Contraseña" #password="ngModel"
+      [(ngModel)]="institution.password" required />
+    <span *ngIf="!password.valid && password.touched">El ingreso es obligatorio</span>
+  </div>
+  <div class="form-group">
+    <input class="btn btn-primary btn-block" type="submit" [disabled]="!registerForm.form.valid" />
+  </div>
+  <div class="alert alert-success" *ngIf="status == 'success'">
+    Registro completado, <strong>Informa</strong> a tus participantes
+  </div>
+  <div class="alert alert-danger" *ngIf="status == 'error'">
+    Ha ocurrido un error, puede que codigo o la institucion ya esten en uso, <strong>Intentalo nuevamente.</strong>
+  </div>
+</form>
+</div>

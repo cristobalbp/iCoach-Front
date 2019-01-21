@@ -1,0 +1,45 @@
+<!-- Perfil -->
+<div class="container" >
+	<div  *ngIf="user">
+		<div >
+			<!-- Imagenes de perfil-->
+			<div class="form-row align-items-center">
+				<img src="{{ url + 'get-image-user/' + user.image}}" class="avatar " *ngIf="user.image" />
+			</div>
+			<div class="form-row align-items-center">
+				<img src="../../../../assets/images/user.png" class="avatar " *ngIf="!user.image" />
+			</div>
+		</div>
+		<!-- Información -->
+		<div class="info">
+				<div >
+						<h3>
+							<strong class="font-weight-light" > {{user.name}} {{user.lastname}} </strong>
+						</h3>
+					</div>
+					<div >
+						<h4>Formacion academica</h4>
+						<h5>{{user.formation}}</h5>
+						<h5>Fecha de nacimiento: {{user.yearold}}</h5>
+						<h5 style="color:red;">Correo electronico: {{ user.email }}</h5>
+					</div>
+					<div >
+						<h4><strong>Disponible en:</strong> </h4>
+						<h5>{{user.region1}} <br>
+							{{user.region2}} <br>
+							{{user.region3}}</h5>
+					</div>
+					<div >
+						<h5>Genero: {{user.gender}}</h5>
+						<h5 style="color: blue;">Metodos de pago disponibles: </h5>
+						<h5 *ngIf="user.payment_bolet">Boleta</h5>
+						<h5 *ngIf="user.payment_facture30">Factura 30 dias</h5>
+						<h5 *ngIf="user.payment_facture60">Factura 60 dias</h5>
+						<h5 *ngIf="user.payment_facture90">Factura 90 dias</h5>
+					</div>
+		</div>
+		
+		
+
+	</div>
+</div>

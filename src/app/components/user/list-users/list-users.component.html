@@ -1,0 +1,68 @@
+<div class="col-md-6 col-md-offset-2">
+	<div class="center-block">
+		<h3><strong> Agregar </strong> a tus participantes.</h3>
+		<div class="coachees">
+			<!-- Listado -->
+			<input [(ngModel)]="searchText" placeholder="Buscar.. " class="form-control " />
+			<br>
+			<div *ngFor="let user of users | fresh: {name: searchText, lastname: searchText, institution: searchText}; let i=index;"
+			 class="item-user">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<div class="image-user pull-left">
+							<a href="#">
+								<img class="avatar rounded-circle" src="{{ url + 'get-image-user/' + user.image}}" *ngIf="user.image" />
+								<img class="avatar rounded-circle" src="assets/images/user.png"  *ngIf="!user.image" />
+							</a>
+
+						</div>
+						<div class="user-name pull-left">
+							<p class="name-lastname">
+								<a [routerLink]="['/perfil', user._id]">
+									&nbsp;{{user.name+ ' ' + user.lastname}}
+								</a>
+							</p>
+							<p class="institution">
+									&nbsp;{{user.institution}}
+							</p>
+							
+						</div>
+						<!-- Seguir // dejar de seguir -->
+						<div class="pull-right" *ngIf="user._id != identity._id">
+							<!--Boton 1 -->
+							<button class="btn btn-success" *ngIf="follows.indexOf(user._id) < 0" (click)="followUser(user._id)">
+								Agregar
+							</button>
+
+							<!-- Boton 2-->
+							<button class="btn btn-primary" *ngIf="follows.indexOf(user._id) >= 0" (mouseenter)="mouseEnter(user._id)"
+							 (mouseleave)="mouseLeave(user._id)" (click)="unFollowUser(user._id)" [class.btn-danger]="user._id == followUserOver">
+
+								<span *ngIf="user._id == followUserOver; else following">
+									Eliminar
+								</span>
+
+								<ng-template #following>
+									Agregado
+								</ng-template>
+							</button>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Hacer paginacion infinita -->
+			<!-- Paginacion 
+		<ul class="pagination pull-right">
+			<li *ngIf="page > 1">
+				<a [routerLink]="['/buscar-usuarios', prev_page]"> Anterior </a>
+			</li>	
+			<li *ngIf="pages != page">
+				<a [routerLink]="['/buscar-usuarios', next_page]"> Siguiente </a>
+			</li>
+		</ul>
+		-->
+		</div>
+	</div>
+</div>

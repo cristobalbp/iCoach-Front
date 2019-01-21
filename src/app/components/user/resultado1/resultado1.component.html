@@ -1,0 +1,61 @@
+<div id="content" #content class="container-fluid" *ngIf="test1">
+    <!-- Test 1 inicial-->
+    <div class="container">
+        <h1 class="font-weight-bold">Resultados y explicación del test estilos de aprendizaje</h1>
+        <h6 *ngIf="identity">Participante: {{identity.name + ' ' + identity.lastname }}</h6>
+        <h6 *ngIf="identity">Institución: {{identity.institution}} </h6>
+        <label>
+            <h2>Visual: {{ test1.visual}}</h2>
+            Tienen un alto nivel de energía, son inquietas y observadoras, captan el detalle y muchos de los pequeños
+            aspectos que a otras personas se les pasan por alto. Suelen visualizar imágenes en su mente para poder
+            recordarlas, y es común que para hacerlo, deban escribirse pequeñas notas o apuntes. Necesitan lugares
+            tranquilos para concentrarse.
+        </label>
+
+        <label>
+            <h2>Auditivo: {{test1.auditivo}}</h2>
+            Según la PNL son personas más relajadas, comunicativas y con grandes dotes de expresión, les gusta
+            conversar y recuerdan con gran detalle cada una de las palabras que han escuchado.
+
+        </label>
+
+        <label>
+            <h2>Cinestesico: {{test1.cinestesico}}</h2>
+            <p>No tienen especial interés por los detalles como pueden ser las personas más “visuales”, pero eso sí, son
+            más espontáneas y con tendencia a buscar emociones en primera persona.</p>
+        </label>
+        <br>
+        <hr>
+        <div>
+            <label>
+                Test realizado a la fecha: &nbsp;{{ (test1.created_at | amFromUnix) | amDateFormat:'MM/DD/YYYY ' }}
+            </label>
+<br>
+            <div *ngIf="barChartData">
+                <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+                    [legend]="barChartLegend" [chartType]="barChartType"></canvas>
+            </div>
+            <label>Dependiendo del mayor valor es el que predomina tu estilo de aprendizaje, consulta a tu Coach para
+                una orientación mas exacta</label>
+            <label>
+                <h5 style="color:#007bff; font: bold">Resultados</h5>
+                <p> [Visual: {{ test1.visual}}] [Auditivo: {{test1.auditivo}}] [Cinestesico: {{test1.cinestesico}}]
+                </p>
+            </label>
+        </div>
+
+       
+
+    </div>
+    
+</div>
+<div class="container">
+    <h3>Descargar como pdf </h3>
+    <!-- Boton para descargar pdf -->
+     <button class="btn btn-secondary" type="button" (click)="downloadPDF()">Descargar a PDF</button>
+
+</div>
+<div class="container">
+        <h3>La ruta de tu Test esta precargada para que se la envies a tu Coach. </h3>
+        <add></add>
+</div>

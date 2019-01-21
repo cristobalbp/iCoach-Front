@@ -1,0 +1,41 @@
+<div class="container-fluid ">
+<!-- Perfil -->
+<div class="card" style="width: 28rem;" id="data-profile" *ngIf="user">
+	<div>
+			<img class="card-img-top" src="assets/images/user.png" *ngIf="!user.image" alt="Card image cap" >
+			<img class="card-img-top" src="{{ url + 'get-image-user/' + user.image}}" *ngIf="user.image" />
+	</div>
+	<div class="card-body">
+		<h5 class="card-title">{{title}}</h5>
+		<p class="card-text">{{user.name +' '+ user.lastname}}</p>
+	</div>
+	<ul class="list-group list-group-flush">
+		<li class="list-group-item">Genero: {{user.gender}}</li>
+		<li class="list-group-item">Fecha de nacimiento: {{user.yearold}}</li>
+		<li class="list-group-item" *ngIf="user.role_coachee"> Fecha de registro: {{user.registration_date}} </li>
+		<li class="list-group-item" *ngIf="user.role_coachee"> Institucion: {{user.institution}} </li>
+		<li class="list-group-item" *ngIf="user.role_coachee"> Personas a cargo: {{user.personas_cargo}} </li>
+	</ul>
+	<div class="card-body">
+		<p class="follow pull-left" *ngIf="!user.role_coachee">
+			<button class="btn btn-success" *ngIf="!following" (click)="followUser(user._id)">
+				Seguir
+			</button>
+			<button class="btn btn-primary" *ngIf="following" (click)="unfollowUser(user._id)" (mouseenter)="mouseEnter(user._id)"
+			 (mouseleave)="mouseLeave()" [class.btn-danger]="user._id == followUserOver">
+				<span *ngIf="user._id == followUserOver; else following">
+					Dejar de seguir
+				</span>
+				<ng-template #following>
+					Siguiendo
+				</ng-template>
+			</button>
+		</p>
+	</div>
+</div>
+<br>
+<!-- Objetivos propuestos -->
+<div class="col-lg-12 publications" *ngIf="user">
+	<app-publications [user]="user._id"></app-publications>
+</div>
+</div>

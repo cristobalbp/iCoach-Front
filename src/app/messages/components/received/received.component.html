@@ -1,0 +1,47 @@
+<div class="col-lg-10">
+	<h3>{{title}}</h3>
+
+	<!--listado de mensajes recibidos-->
+	<div class="people" *ngIf="messages">
+
+		<!--LISTADO-->
+		<div *ngFor="let message of messages" class="item-user">
+			<div class="panel panel-default" *ngIf="message.emitter">
+				<div class="panel-body">
+					<div class="image-user pull-left">
+						<a href="#">
+							<img class="rounded-circle" style="height: 50px; width: 50px" src="{{ url +'get-image-user/' + message.emitter.image }}" *ngIf="message.emitter.image"/>
+							<img class="rounded-circle" style="height: 50px; width: 50px" src="assets/images/user.png"  *ngIf="!message.emitter.image"/>
+						</a>	
+					</div>
+
+					<div class="user-name pull-left">
+						<p class="name-surname">
+							<a [routerLink]="['/perfil',message.emitter._id]">
+								&nbsp;{{message.emitter.name + ' ' + message.emitter.lastname}}
+							</a>
+							&nbsp;|&nbsp;
+							<span class="nickname">{{message.emitter.rut}}</span>
+							&nbsp;|&nbsp;
+							<span class="date nickname">
+									&nbsp;{{ (message.created_at | amFromUnix) | amLocale:'es' | amTimeAgo }}
+							</span>
+							
+						</p>
+						<p>
+								&nbsp;{{message.text}}
+						</p>
+					</div>
+
+				</div>
+			
+			</div>
+
+		</div>
+
+		<!--PAGINACION-->
+		<ul class="pagination pull-right">
+			<li *ngIf="page > 1"><a [routerLink]="['/mensajes/recibidos', prev_page]">Anterior</a></li>
+			<li *ngIf="pages != page"><a [routerLink]="['/mensajes/recibidos', next_page]">Siguiente</a></li>
+		</ul>
+</div>
