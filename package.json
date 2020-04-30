@@ -32,7 +32,7 @@
     "core-js": "^2.5.4",
     "font-awesome": "^4.7.0",
     "highcharts": "^6.2.0",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "jspdf": "^1.4.1",
     "ng2-charts": "^1.6.0",
     "ng2-rut": "^0.2.3",
